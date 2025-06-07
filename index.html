@@ -3,49 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Compawss – Inclusive Pet Adoption Powered by AI</title>
+  <title>Compawss – Inclusive Pet Adoption Platform</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    body { font-family: 'Helvetica Neue', sans-serif; background-color: #FFFDF7; color: #333; }
-    .btn:hover { background-color: #D97E27 !important; color: white !important; }
+    body { font-family: 'Helvetica Neue', sans-serif; background-color: #FFF7EB; color: #333; }
+    .btn:hover { background-color: #F97316 !important; color: white !important; }
     .lang-btn { margin: 0 0.25rem; font-weight: bold; cursor: pointer; }
   </style>
   <script>
     const translations = {
       en: {
         headline: "Compawss: The Future of Adoption & Animal Welfare",
-        subheadline: "Not just cats and dogs — every pet deserves a home. From snakes to rats, rabbits to reptiles.",
+        subheadline: "Not just cats and dogs — every pet deserves a home. From snakes to hamsters, rabbits to reptiles.",
         cta: "Join the Movement",
-        mission: "The Problem",
-        mission_text: "Adoption events struggle with visibility. Volunteers are hard to coordinate. Shelters are overcrowded. And animals wait too long.",
-        ai: "How AI Enhances Adoption",
-        ai_text: "Compawss uses AI to match pets and people, promote events, assign volunteers, and help lost pets find their homes.",
-        tech: "AI Technologies Used",
-        tech_list: "<li>Smart Matching</li><li>AI Event Promotion</li><li>Logistics Optimization</li><li>Chatbot Help</li>",
-        impact: "Our Vision",
-        impact_text: "Better matches. Engaged communities. Happy pets. Global scale.",
+        challenge: "The Challenge",
+        challenge_text: "Many pets are overlooked, shelters are overcrowded, and adoption is often a mismatched or broken process. Volunteers are hard to coordinate, and adoption events are under-promoted.",
+        what_is: "What is Compawss?",
+        what_is_text: "Compawss is a multilingual AI-powered platform that supports inclusive pet adoption. We connect people with the right animals, simplify volunteer work, and boost shelter visibility — globally.",
+        how_ai: "How AI Helps",
+        how_ai_text: "AI-driven matchmaking, logistics for shelters, lost pet location help, and community storytelling tools are at the heart of Compawss.",
+        help_title: "How You Can Help",
+        help_list: "<li>Adopt or foster any kind of animal 🐢</li><li>Volunteer or share events</li><li>Spread the word — every voice helps</li>",
         contact: "Contact Us",
         contact_sub: "Get in touch to support or collaborate.",
         send: "Send Message"
       },
       nl: {
         headline: "Compawss: De Toekomst van Adoptie & Dierenwelzijn",
-        subheadline: "Niet alleen katten en honden — elk dier verdient een thuis. Van slangen tot konijnen, vogels tot reptielen.",
+        subheadline: "Niet alleen katten en honden — elk huisdier verdient een thuis. Van slangen tot hamsters, konijnen tot reptielen.",
         cta: "Doe Mee",
-        mission: "Het Probleem",
-        mission_text: "Adoptie-evenementen krijgen weinig aandacht. Vrijwilligers zijn moeilijk te organiseren. En dieren wachten te lang.",
-        ai: "Hoe AI Helpt",
-        ai_text: "Compawss gebruikt AI om huisdieren te koppelen aan mensen, vrijwilligers in te plannen en vermiste dieren terug te brengen.",
-        tech: "Gebruikte Technologieën",
-        tech_list: "<li>Slimme Matches</li><li>AI Evenementpromotie</li><li>Vrijwilligerplanning</li><li>24/7 Chatbot</li>",
-        impact: "Onze Visie",
-        impact_text: "Betere matches. Betrokken gemeenschappen. Gelukkige dieren.",
+        challenge: "De Uitdaging",
+        challenge_text: "Veel dieren worden over het hoofd gezien, schuilplaatsen zitten vol, en adopties mislukken vaak. Vrijwilligers zijn moeilijk te vinden en evenementen worden slecht gepromoot.",
+        what_is: "Wat is Compawss?",
+        what_is_text: "Compawss is een meertalige AI-gestuurde platform voor inclusieve adoptie. We koppelen mensen aan dieren, coördineren vrijwilligers en vergroten de zichtbaarheid van asielen — wereldwijd.",
+        how_ai: "Hoe AI Helpt",
+        how_ai_text: "AI-matchmaking, logistiek voor schuilplaatsen, hulp bij vermiste dieren, en community-verhalen staan centraal in Compawss.",
+        help_title: "Hoe Je Kunt Helpen",
+        help_list: "<li>Adopteer of vang een dier op 🐢</li><li>Word vrijwilliger of deel evenementen</li><li>Verspreid de boodschap — elke stem telt</li>",
         contact: "Contacteer Ons",
-        contact_sub: "Steun of werk samen met ons.",
+        contact_sub: "Steun ons of werk met ons samen.",
         send: "Verzend"
       }
     };
-
     function switchLang(lang) {
       const t = translations[lang];
       for (const id in t) {
@@ -63,55 +62,50 @@
 </head>
 <body>
 
-  <!-- Header -->
-  <header class="relative">
-    <div class="flex justify-between items-center p-4 absolute z-10 w-full">
-      <img src="compawss_logo.png" alt="Compawss Logo" class="h-20" />
+  <header class="relative bg-orange-100">
+    <div class="flex justify-between items-center p-4 max-w-6xl mx-auto">
+      <img src="compawss_logo.png" alt="Compawss Logo" class="h-24" />
       <div>
         <span class="lang-btn" onclick="switchLang('en')">EN</span>
         <span class="lang-btn" onclick="switchLang('nl')">NL</span>
       </div>
     </div>
-    <div class="h-[70vh] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('03p4mdq9.png')">
+    <div class="h-[60vh] bg-cover bg-center flex items-center justify-center text-white text-center" style="background-image: url('gt6kw0pt.png')">
       <div class="bg-black bg-opacity-60 p-6 rounded-lg max-w-2xl">
         <h1 id="headline" class="text-4xl font-bold mb-4">Compawss: The Future of Adoption & Animal Welfare</h1>
-        <p id="subheadline" class="text-lg mb-6">Not just cats and dogs — every pet deserves a home. From snakes to rats, rabbits to reptiles.</p>
+        <p id="subheadline" class="text-lg mb-6">Not just cats and dogs — every pet deserves a home. From snakes to hamsters, rabbits to reptiles.</p>
         <a href="#contact" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold btn" id="cta">Join the Movement</a>
       </div>
     </div>
   </header>
 
-  <!-- Main Sections -->
-  <section class="py-12 px-6 max-w-4xl mx-auto text-center">
-    <h2 id="mission" class="text-2xl font-bold mb-4">The Problem</h2>
-    <p id="mission_text" class="mb-10">Adoption events struggle with visibility. Volunteers are hard to coordinate. Shelters are overcrowded. And animals wait too long.</p>
-    <img src="gt6kw0pt.png" class="rounded-xl shadow mx-auto mb-12 w-full max-w-md" />
-    <h2 id="ai" class="text-2xl font-bold mb-4">How AI Enhances Adoption</h2>
-    <p id="ai_text" class="mb-10">Compawss uses AI to match pets and people, promote events, assign volunteers, and help lost pets find their homes.</p>
-    <h2 id="tech" class="text-2xl font-bold mb-4">AI Technologies Used</h2>
-    <ul id="tech_list" class="mb-10 list-disc text-left max-w-md mx-auto pl-6">
-      <li>Smart Matching</li>
-      <li>AI Event Promotion</li>
-      <li>Logistics Optimization</li>
-      <li>Chatbot Help</li>
-    </ul>
-    <h2 id="impact" class="text-2xl font-bold mb-4">Our Vision</h2>
-    <p id="impact_text" class="mb-6">Better matches. Engaged communities. Happy pets. Global scale.</p>
-  </section>
+  <main class="py-12 px-6 max-w-4xl mx-auto text-center">
+    <h2 id="challenge" class="text-2xl font-bold mb-4">The Challenge</h2>
+    <p id="challenge_text" class="mb-10"></p>
 
-  <!-- Contact -->
-  <section id="contact" class="bg-gray-100 py-12 px-6 text-center">
+    <img src="20250606_1615_Animal Shelter Support_simple_compose_01jx2sdqw6eyerek083shypm58.png" class="rounded-xl shadow mx-auto mb-10 w-full max-w-lg" />
+
+    <h2 id="what_is" class="text-2xl font-bold mb-4">What is Compawss?</h2>
+    <p id="what_is_text" class="mb-10"></p>
+
+    <h2 id="how_ai" class="text-2xl font-bold mb-4">How AI Helps</h2>
+    <p id="how_ai_text" class="mb-10"></p>
+
+    <h2 id="help_title" class="text-2xl font-bold mb-4">How You Can Help</h2>
+    <ul id="help_list" class="mb-10 list-disc text-left max-w-md mx-auto pl-6"></ul>
+  </main>
+
+  <section id="contact" class="bg-orange-50 py-12 px-6 text-center">
     <h2 id="contact" class="text-2xl font-bold mb-4">Contact Us</h2>
     <p id="contact_sub" class="mb-6">Get in touch to support or collaborate.</p>
     <form action="https://formspree.io/f/mldngvvg" method="POST" class="max-w-lg mx-auto grid gap-4">
       <input type="text" name="name" required placeholder="Your Name" class="p-3 border rounded" />
       <input type="email" name="email" required placeholder="Your Email" class="p-3 border rounded" />
       <textarea name="message" rows="5" required placeholder="Your Message" class="p-3 border rounded"></textarea>
-      <button type="submit" id="send" class="bg-yellow-400 text-black py-3 rounded font-bold btn">Send Message</button>
+      <button type="submit" id="send" class="bg-orange-400 text-white py-3 rounded font-bold btn">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
   <footer class="bg-gray-800 text-white py-6 text-center">
     <img src="compawss_logo.png" alt="Compawss Logo" class="h-12 mx-auto mb-2" />
     <p>&copy; 2025 Compawss. Every pet. Every person. Every story.</p>
