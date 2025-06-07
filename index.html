@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,46 +10,62 @@
     .primary { background-color: #F4C95D; }
     .btn:hover { background-color: #D97E27 !important; color: white !important; }
     .lang-btn { margin: 0 0.25rem; font-weight: bold; cursor: pointer; }
+    .bg-decor { background-image: url('gt6kw0pt.png'); background-size: cover; background-position: center; }
   </style>
   <script>
     const translations = {
       en: {
         title: "Compawss: The Future of Adoption & Animal Welfare",
         subtitle: "Not just cats and dogs — every pet deserves a home. From rabbits to reptiles, birds to snakes.",
-        mission: "Explore Our Mission",
-        mission_text: "This section confirms scrolling works and the page loads correctly."
+        mission: "Our Mission",
+        mission_text: "Using AI to match pets with people, boost shelter success, and celebrate every species.",
+        ai: "AI Benefits",
+        ai_text: "Smarter adoptions, organized volunteers, and powerful pet search tools.",
+        impact: "The Compawss Impact",
+        impact_text: "Higher adoption rates, global potential, and better lives for all animals."
       },
       nl: {
         title: "Compawss: De Toekomst van Adoptie & Dierenwelzijn",
         subtitle: "Niet alleen katten en honden — elk huisdier verdient een thuis. Van konijnen tot reptielen, vogels tot slangen.",
-        mission: "Ontdek Onze Missie",
-        mission_text: "Deze sectie bevestigt dat scrollen werkt en de pagina correct laadt."
+        mission: "Onze Missie",
+        mission_text: "AI gebruiken om huisdieren te matchen met mensen, schuilplaatsen te versterken en elke soort te steunen.",
+        ai: "AI Voordelen",
+        ai_text: "Slimmere adopties, georganiseerde vrijwilligers en krachtige zoektools.",
+        impact: "De Compawss Impact",
+        impact_text: "Meer succesvolle adopties, wereldwijde potentie en een beter leven voor alle dieren."
       },
       de: {
         title: "Compawss: Die Zukunft der Adoption & des Tierschutzes",
         subtitle: "Nicht nur Katzen und Hunde — jedes Tier verdient ein Zuhause. Von Kaninchen bis Reptilien, Vögeln bis Schlangen.",
-        mission: "Entdecke Unsere Mission",
-        mission_text: "Dieser Abschnitt bestätigt, dass das Scrollen funktioniert und die Seite richtig geladen ist."
+        mission: "Unsere Mission",
+        mission_text: "KI zur Vermittlung von Haustieren, Unterstützung von Tierheimen und Sichtbarkeit für jede Art.",
+        ai: "Vorteile von KI",
+        ai_text: "Intelligentere Vermittlungen, organisierte Freiwillige, bessere Suchfunktionen.",
+        impact: "Der Compawss-Effekt",
+        impact_text: "Mehr Adoptionen, globale Skalierung und mehr Sichtbarkeit für Tiere."
       },
       es: {
         title: "Compawss: El Futuro de la Adopción y el Bienestar Animal",
         subtitle: "No solo gatos y perros — cada mascota merece un hogar. Desde conejos hasta reptiles, aves y serpientes.",
-        mission: "Explora Nuestra Misión",
-        mission_text: "Esta sección confirma que la página se carga y se puede desplazar correctamente."
+        mission: "Nuestra Misión",
+        mission_text: "Usar IA para unir mascotas y personas, apoyar refugios y visibilizar todas las especies.",
+        ai: "Beneficios de la IA",
+        ai_text: "Adopciones más inteligentes, voluntarios organizados, búsquedas efectivas.",
+        impact: "El Impacto de Compawss",
+        impact_text: "Más adopciones, expansión global y mejores vidas para todos los animales."
       }
     };
 
     function switchLang(lang) {
-      document.getElementById('title').innerText = translations[lang].title;
-      document.getElementById('subtitle').innerText = translations[lang].subtitle;
-      document.getElementById('mission').innerText = translations[lang].mission;
-      document.getElementById('mission_text').innerText = translations[lang].mission_text;
+      for (const id in translations[lang]) {
+        document.getElementById(id).innerText = translations[lang][id];
+      }
     }
   </script>
 </head>
 <body>
 
-  <!-- Header with logo and language buttons -->
+  <!-- Header -->
   <header class="relative bg-gray-100">
     <div class="flex items-center justify-between p-4 absolute w-full z-10">
       <img src="compawss_logo.png" alt="Compawss Logo" class="h-20 w-auto" />
@@ -70,9 +85,25 @@
     </div>
   </header>
 
-  <section class="py-16 px-6 max-w-5xl mx-auto">
-    <h2 id="mission" class="text-3xl font-bold mb-6 text-center">Explore Our Mission</h2>
-    <p id="mission_text" class="text-lg text-center">This section confirms scrolling works and the page loads correctly.</p>
+  <!-- Mission Section -->
+  <section class="py-16 px-6 max-w-5xl mx-auto text-center">
+    <img src="gt6kw0pt.png" class="h-52 mx-auto mb-6 rounded-xl shadow-lg" />
+    <h2 id="mission" class="text-3xl font-bold mb-4">Our Mission</h2>
+    <p id="mission_text" class="text-lg">Using AI to match pets with people, boost shelter success, and celebrate every species.</p>
+  </section>
+
+  <!-- AI Benefits -->
+  <section class="bg-yellow-100 py-16 px-6 text-center">
+    <h2 id="ai" class="text-3xl font-bold mb-4">AI Benefits</h2>
+    <p id="ai_text" class="text-lg max-w-3xl mx-auto">Smarter adoptions, organized volunteers, and powerful pet search tools.</p>
+    <img src="compawss_logo.png" class="h-40 mx-auto mt-6 opacity-40" />
+  </section>
+
+  <!-- Impact -->
+  <section class="py-16 px-6 max-w-5xl mx-auto text-center">
+    <h2 id="impact" class="text-3xl font-bold mb-4">The Compawss Impact</h2>
+    <p id="impact_text" class="text-lg mb-6">Higher adoption rates, global potential, and better lives for all animals.</p>
+    <img src="03p4mdq9.png" class="h-48 mx-auto rounded-lg shadow" />
   </section>
 
   <!-- Footer -->
