@@ -3,10 +3,103 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Compawss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss – AI for Every Paw</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --main-bg: #fffaf5;
+      --accent: #ff914d;
+      --text-dark: #1e293b;
+      --highlight: #0284c7;
+    }
+    body {
+      background-color: var(--main-bg);
+    }
+  </style>
 </head>
-<body>
-  <h1>Welcome to Compawss</h1>
-  <p>This is a placeholder page while Ava finishes the final version.</p>
+<body class="font-sans text-gray-900">
+  <header class="bg-white p-4 shadow flex justify-between items-center">
+    <img src="logo.png" alt="Compawss Logo" class="h-16">
+    <div class="space-x-2 text-sm">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('pt')">PT</button>
+      <button onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('de')">DE</button>
+      <button onclick="setLang('nl')">NL</button>
+      <button onclick="setLang('es')">ES</button>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+    <section class="text-center">
+      <h1 class="text-4xl font-bold mb-2" data-en="Compawss – The Future of Animal Adoption & Welfare"
+          data-pt="Compawss – O Futuro da Adoção e Bem-Estar Animal"
+          data-fr="Compawss – L'avenir de l'adoption et du bien-être animal"
+          data-de="Compawss – Die Zukunft der Tieradoption und -fürsorge"
+          data-nl="Compawss – De toekomst van adoptie en dierenwelzijn"
+          data-es="Compawss – El futuro de la adopción y el bienestar animal">
+      </h1>
+      <p class="text-lg" data-en="AI-powered platform supporting adoptions, volunteer coordination, rescue logistics, and event visibility – for all pets, not just cats and dogs."
+         data-pt="Plataforma com IA para adoções, voluntariado, resgates e eventos – para todos os pets, não apenas gatos e cães."
+         data-fr="Plateforme IA pour l’adoption, le bénévolat, les sauvetages et les événements – pour tous les animaux."
+         data-de="KI-Plattform für Adoptionen, Freiwilligenarbeit, Rettung und Events – für alle Tiere."
+         data-nl="AI-platform voor adopties, vrijwilligers, reddingen en evenementen – voor alle huisdieren."
+         data-es="Plataforma IA para adopciones, voluntariado, rescates y eventos – para todos los animales.">
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-2 gap-6">
+      <img src="hero.png" alt="AI match pet" class="rounded shadow">
+      <img src="image1.png" alt="Volunteering with animals" class="rounded shadow">
+      <img src="image2.png" alt="Shelter logistics" class="rounded shadow">
+      <img src="image3.png" alt="Adoption success" class="rounded shadow">
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold mb-4" data-en="What is Compawss?" data-pt="O que é o Compawss?" data-fr="Qu'est-ce que Compawss ?" data-de="Was ist Compawss?" data-nl="Wat is Compawss?" data-es="¿Qué es Compawss?"></h2>
+      <p class="text-lg" data-en="Compawss is a smart platform that uses AI to improve the way we find homes for animals of all kinds. From hamsters and parrots to snakes and senior cats, we make sure every animal has a chance."
+         data-pt="Compawss é uma plataforma inteligente que usa IA para melhorar adoções de todos os tipos de animais – de hamsters e papagaios a cobras e gatos idosos."
+         data-fr="Compawss est une plateforme intelligente qui utilise l’IA pour améliorer l’adoption d’animaux – des hamsters et perroquets aux serpents et chats âgés."
+         data-de="Compawss ist eine smarte Plattform, die mit KI Adoptionen für alle Tiere verbessert – von Hamstern bis Papageien und Schlangen."
+         data-nl="Compawss is een slim AI-platform dat helpt om huisdieren van alle soorten te adopteren – van hamsters tot slangen."
+         data-es="Compawss es una plataforma con IA que mejora la adopción de todos los animales – de hámsters a serpientes.">
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-2" data-en="How Compawss Helps" data-pt="Como o Compawss Ajuda" data-fr="Comment Compawss Aide" data-de="Wie Compawss hilft" data-nl="Hoe Compawss Helpt" data-es="Cómo ayuda Compawss"></h2>
+      <ul class="list-disc pl-6 space-y-2 text-lg">
+        <li data-en="AI Matching System for perfect pet-human fit" data-pt="Sistema de Correspondência IA para adoção perfeita" data-fr="Système de correspondance IA pour adoption idéale" data-de="KI-Matching für perfekte Adoption" data-nl="AI-matching voor perfecte adoptie" data-es="Sistema IA para adopciones perfectas"></li>
+        <li data-en="Volunteer Hub – optimize roles and schedules" data-pt="Central de Voluntários – papéis otimizados" data-fr="Espace bénévoles – rôles optimisés" data-de="Freiwilligen-Management optimieren" data-nl="Vrijwilligers coördineren" data-es="Centro de voluntariado – optimizado"></li>
+        <li data-en="Event Promotion AI for adoption fairs" data-pt="Promoção de eventos com IA" data-fr="Promotion d’événements IA" data-de="Veranstaltungs-Werbung mit KI" data-nl="Evenementen promoten met AI" data-es="Promoción de eventos con IA"></li>
+        <li data-en="Rescue & Lost Pet Optimization" data-pt="Otimização de resgates e achados" data-fr="Optimisation des sauvetages" data-de="Optimierung von Rettungen" data-nl="Reddingslogistiek optimaliseren" data-es="Optimización de rescates y mascotas perdidas"></li>
+        <li data-en="Community stories & global support" data-pt="Histórias da comunidade e apoio global" data-fr="Histoires de la communauté" data-de="Community-Geschichten & globale Hilfe" data-nl="Gemeenschapsverhalen en wereldwijde steun" data-es="Historias comunitarias y apoyo global"></li>
+      </ul>
+    </section>
+
+    <section id="contact" class="mt-12">
+      <h2 class="text-xl font-semibold mb-2" data-en="Get in Touch" data-pt="Entre em Contato" data-fr="Contactez-nous" data-de="Kontaktieren Sie uns" data-nl="Neem contact op" data-es="Contáctanos"></h2>
+      <form action="https://formspree.io/f/mldngvvg" method="POST" class="grid gap-4 max-w-md">
+        <input type="text" name="name" required placeholder="Your name" class="border p-2">
+        <input type="email" name="email" required placeholder="Your email" class="border p-2">
+        <textarea name="message" rows="4" required placeholder="Your message" class="border p-2"></textarea>
+        <button type="submit" class="bg-orange-500 text-white px-4 py-2">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="text-center text-sm text-gray-600 py-6 mt-12">
+    Built with love by Ava Delmar & Ursula Ivie – for every creature who needs a home 🐾
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+    setLang('en');
+  </script>
 </body>
 </html>
