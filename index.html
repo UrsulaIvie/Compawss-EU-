@@ -3,104 +3,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compawss – For All Pets</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    const translations = {
-      en: {
-        hero: "The Future of Adoption & Animal Welfare",
-        description: "Compawss helps match all pets — not just cats and dogs — with the perfect home using AI.",
-        contact: "Contact Us",
-        send: "Send",
-        about: "About Compawss"
-      },
-      pt: {
-        hero: "O Futuro da Adoção e Bem-Estar Animal",
-        description: "O Compawss ajuda todos os animais — não só cães e gatos — a encontrar um lar ideal com ajuda da IA.",
-        contact: "Fale Conosco",
-        send: "Enviar",
-        about: "Sobre o Compawss"
-      },
-      fr: {
-        hero: "L'avenir de l'adoption et du bien-être animal",
-        description: "Compawss aide tous les animaux — pas seulement les chats et les chiens — à trouver un foyer grâce à l'IA.",
-        contact: "Contactez-nous",
-        send: "Envoyer",
-        about: "À propos de Compawss"
-      },
-      de: {
-        hero: "Die Zukunft der Adoption & des Tierschutzes",
-        description: "Compawss hilft allen Tieren – nicht nur Katzen und Hunden – mit KI ein Zuhause zu finden.",
-        contact: "Kontaktieren Sie uns",
-        send: "Senden",
-        about: "Über Compawss"
-      },
-      nl: {
-        hero: "De Toekomst van Adoptie en Dierenwelzijn",
-        description: "Compawss helpt alle dieren — niet alleen honden en katten — met AI een thuis te vinden.",
-        contact: "Neem contact op",
-        send: "Verzenden",
-        about: "Over Compawss"
-      },
-      es: {
-        hero: "El Futuro de la Adopción y el Bienestar Animal",
-        description: "Compawss ayuda a todas las mascotas — no solo perros y gatos — a encontrar hogar con IA.",
-        contact: "Contáctanos",
-        send: "Enviar",
-        about: "Sobre Compawss"
-      }
-    };
-    function switchLang(lang) {
-      const t = translations[lang];
-      document.getElementById("hero-title").innerText = t.hero;
-      document.getElementById("hero-desc").innerText = t.description;
-      document.getElementById("contact-title").innerText = t.contact;
-      document.getElementById("send-btn").innerText = t.send;
-      document.getElementById("about-title").innerText = t.about;
-    }
-  </script>
+  <title>Compawss</title>
 </head>
-<body class="bg-[#f7eedf] text-gray-800">
-
-<header class="flex items-center justify-between p-6 bg-white shadow">
-  <img src="logo.png" alt="Compawss Logo" class="h-20" />
-  <div class="space-x-2">
-    <button onclick="switchLang('en')">EN</button>
-    <button onclick="switchLang('pt')">PT</button>
-    <button onclick="switchLang('fr')">FR</button>
-    <button onclick="switchLang('de')">DE</button>
-    <button onclick="switchLang('nl')">NL</button>
-    <button onclick="switchLang('es')">ES</button>
-  </div>
-</header>
-
-<section class="text-center py-20 bg-cover bg-center" style="background-image:url('hero.png')">
-  <div class="bg-white bg-opacity-80 p-6 inline-block rounded-xl max-w-2xl mx-auto">
-    <h1 id="hero-title" class="text-4xl font-bold text-[#3a7d73]">The Future of Adoption & Animal Welfare</h1>
-    <p id="hero-desc" class="mt-4 text-lg text-gray-700">Compawss helps match all pets — not just cats and dogs — with the perfect home using AI.</p>
-  </div>
-</section>
-
-<section class="p-10">
-  <h2 id="about-title" class="text-3xl font-semibold text-center mb-6 text-[#d2693a]">About Compawss</h2>
-  <p class="max-w-4xl mx-auto text-center text-lg">Compawss is an AI-powered platform that connects shelters, adopters, and volunteers for all animals — from dogs and cats to snakes, rabbits, birds, and hamsters. We use intelligent matchmaking, event boosting, and community engagement tools to improve adoption success and shelter efficiency. Everyone deserves a forever home — and every species deserves visibility.</p>
-</section>
-
-<section class="bg-white p-10" id="contact">
-  <h2 id="contact-title" class="text-3xl font-semibold text-center mb-6 text-[#3a7d73]">Contact Us</h2>
-  <form action="https://formspree.io/f/mldngvvg" method="POST" class="max-w-md mx-auto space-y-4">
-    <input name="name" required placeholder="Your name" class="w-full p-3 border rounded" />
-    <input type="email" name="email" required placeholder="Your email" class="w-full p-3 border rounded" />
-    <textarea name="message" required placeholder="Your message" class="w-full p-3 border rounded"></textarea>
-    <button id="send-btn" type="submit" class="px-6 py-2 bg-[#d2693a] hover:bg-[#3a7d73] text-white rounded-full">Send</button>
-  </form>
-</section>
-
-<footer class="text-center p-6 bg-[#3a7d73] text-white text-sm">
-  Built with love and AI by <strong>Ava Delmar</strong> · © 2025 Compawss
-</footer>
-
-<script>switchLang('en');</script>
+<body>
+  <h1>Welcome to Compawss</h1>
+  <p>This is a placeholder page while Ava finishes the final version.</p>
 </body>
 </html>
