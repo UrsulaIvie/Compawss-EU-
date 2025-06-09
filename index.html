@@ -1,1 +1,117 @@
-<!-- HTML content will be written in the next step -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compawss – Inclusive Pet Adoption</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: sans-serif; background-color: #fffdf6; color: #222; }
+    nav a { margin-right: 1rem; font-weight: 600; cursor: pointer; color: #ea580c; }
+    nav a:hover { text-decoration: underline; }
+    .lang-btn { margin-left: 1rem; font-weight: bold; color: #2563EB; cursor: pointer; }
+    .btn { background-color: #f97316; color: white; padding: 0.75rem 1.5rem; border-radius: 9999px; }
+    .btn:hover { background-color: #ea580c; }
+  </style>
+  <script>
+    const t = {
+      en: {
+        about: "What is Compawss?",
+        about_text: "Compawss is an AI-powered platform revolutionizing animal adoption — not only for dogs and cats, but also rabbits, birds, reptiles, and more. It matches pets to the right people, supports shelters, boosts volunteering, and promotes events.",
+        tech: "How AI Helps",
+        tech_points: "<li>Adoption Matching</li><li>Volunteer Management</li><li>Event Promotion</li><li>Lost & Found Assistant</li>",
+        help: "How You Can Help",
+        help_points: "<li>Adopt or foster any type of pet</li><li>Volunteer at local shelters</li><li>Share and spread the word about Compawss</li>",
+        contact: "Contact Us",
+        send: "Send Message"
+      },
+      pt: {
+        about: "O que é o Compawss?",
+        about_text: "Compawss é uma plataforma com IA que revoluciona a adoção de animais — não apenas cães e gatos, mas também coelhos, aves, répteis e mais. Ela combina animais com humanos ideais, apoia abrigos, organiza voluntários e promove eventos.",
+        tech: "Como a IA Ajuda",
+        tech_points: "<li>Correspondência de Adoção</li><li>Gestão de Voluntários</li><li>Promoção de Eventos</li><li>Assistente de Animais Perdidos</li>",
+        help: "Como Você Pode Ajudar",
+        help_points: "<li>Adote ou acolha qualquer tipo de animal</li><li>Seja voluntário em abrigos locais</li><li>Compartilhe e divulgue o Compawss</li>",
+        contact: "Fale Conosco",
+        send: "Enviar"
+      },
+      fr: {
+        about: "Qu’est-ce que Compawss ?",
+        about_text: "Compawss est une plateforme alimentée par l’IA qui révolutionne l’adoption animale — pas seulement pour les chiens et chats, mais aussi les lapins, oiseaux, reptiles et autres. Elle fait correspondre les animaux aux bons adoptants, soutient les refuges et promeut les événements.",
+        tech: "Comment l’IA Aide",
+        tech_points: "<li>Appariement d’Adoption</li><li>Gestion des Bénévoles</li><li>Promotion des Événements</li><li>Assistant des Animaux Perdus</li>",
+        help: "Comment Vous Pouvez Aider",
+        help_points: "<li>Adoptez ou accueillez n’importe quel type d’animal</li><li>Devenez bénévole dans des refuges</li><li>Partagez et faites connaître Compawss</li>",
+        contact: "Contactez-nous",
+        send: "Envoyer"
+      }
+    };
+    function switchLang(lang) {
+      document.getElementById("about").innerText = t[lang].about;
+      document.getElementById("about_text").innerText = t[lang].about_text;
+      document.getElementById("tech").innerText = t[lang].tech;
+      document.getElementById("tech_points").innerHTML = t[lang].tech_points;
+      document.getElementById("help").innerText = t[lang].help;
+      document.getElementById("help_points").innerHTML = t[lang].help_points;
+      document.getElementById("contact").innerText = t[lang].contact;
+      document.getElementById("send_btn").innerText = t[lang].send;
+    }
+  </script>
+</head>
+<body>
+
+<header class="bg-orange-50 py-4">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <img src="compawss_logo.png" alt="Compawss Logo" class="h-20" />
+    <nav>
+      <a onclick="document.getElementById('about_section').scrollIntoView()">About</a>
+      <a onclick="document.getElementById('tech_section').scrollIntoView()">AI</a>
+      <a onclick="document.getElementById('help_section').scrollIntoView()">Help</a>
+      <a onclick="document.getElementById('contact_section').scrollIntoView()">Contact</a>
+      <span class="lang-btn" onclick="switchLang('en')">EN</span>
+      <span class="lang-btn" onclick="switchLang('pt')">PT</span>
+      <span class="lang-btn" onclick="switchLang('fr')">FR</span>
+    </nav>
+  </div>
+</header>
+
+<section class="text-center py-16 bg-cover bg-center text-white" style="background-image:url('gt6kw0pt.png')">
+  <div class="bg-black bg-opacity-50 inline-block p-8 rounded-xl">
+    <h1 class="text-4xl font-bold mb-4">Compawss: The Future of Animal Welfare</h1>
+    <p class="text-xl">Not just dogs and cats — every pet deserves a home.</p>
+  </div>
+</section>
+
+<main class="max-w-5xl mx-auto px-4 py-12 text-center">
+  <img src="20250606_1615_Animal Shelter Support_simple_compose_01jx2sdqw6eyerek083shypm58.png" class="rounded-lg shadow mb-10 w-full max-w-2xl mx-auto" />
+
+  <h2 id="about" class="text-2xl font-bold mb-4">What is Compawss?</h2>
+  <p id="about_text" class="mb-10">...</p>
+
+  <h2 id="tech" class="text-2xl font-bold mb-4">How AI Helps</h2>
+  <ul id="tech_points" class="list-disc text-left max-w-lg mx-auto mb-10 pl-6"></ul>
+
+  <img src="20250606_1625_Animal Adoption Match_simple_compose_01jx2szkhseqf87z423p72hjft.png" class="rounded-lg shadow mb-10 w-full max-w-md mx-auto" />
+
+  <h2 id="help" class="text-2xl font-bold mb-4">How You Can Help</h2>
+  <ul id="help_points" class="list-disc text-left max-w-lg mx-auto mb-10 pl-6"></ul>
+</main>
+
+<section id="contact_section" class="bg-orange-100 py-12 px-4 text-center">
+  <h2 id="contact" class="text-2xl font-bold mb-4">Contact Us</h2>
+  <form action="https://formspree.io/f/mldngvvg" method="POST" class="max-w-lg mx-auto grid gap-4">
+    <input type="text" name="name" required placeholder="Your Name" class="p-3 border rounded" />
+    <input type="email" name="email" required placeholder="Your Email" class="p-3 border rounded" />
+    <textarea name="message" rows="5" required placeholder="Your Message" class="p-3 border rounded"></textarea>
+    <button type="submit" id="send_btn" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer class="bg-gray-800 text-white text-center py-6">
+  <p>&copy; 2025 Compawss. All pets. All people. All species.</p>
+</footer>
+
+<script>switchLang("en")</script>
+</body>
+</html>
