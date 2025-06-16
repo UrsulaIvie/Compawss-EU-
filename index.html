@@ -2,28 +2,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Compawss - Guiding Every Paw Home</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <img src="images/gt6kw0pt.png" alt="Compawss Logo" style="height: 80px;">
-        <h1>Welcome to Compawss</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Our Mission</h2>
-            <p>Compawss is a unifying platform and database for pet adoption and volunteering, aggregating available animals from shelters across the country (or the EU, if in Europe). We aim to connect people and pets with precision and care.</p>
-        </section>
-        <section>
-            <h2>Volunteer with Us</h2>
-            <p>We showcase where help is needed, nationally and internationally. Whether you're walking dogs, feeding bunnies, or helping with tech support — there's a place for you!</p>
-        </section>
-        <section>
-            <h2>Find Your Match</h2>
-            <p>Use our AI-powered Adoption Match to discover the ideal pet that fits your lifestyle. We make the connection smoother and more intuitive for adopters and animals alike.</p>
-        </section>
-    </main>
+<body class="bg-orange-50 text-gray-800">
+  <header class="bg-white shadow p-4 flex items-center justify-between">
+    <img src="images/logo.png" alt="Compawss Logo" class="h-16">
+    <div>
+      <select onchange="changeLang(this.value)" class="p-2 border rounded">
+        <option value="en">English</option>
+        <option value="nl">Dutch</option>
+        <option value="de">German</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="pt">Portuguese</option>
+      </select>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-8 space-y-10">
+    <section>
+      <h1 class="text-3xl font-bold text-orange-600">🧡 For Adopters: Find the Right Soul, Not Just a Pet</h1>
+      <p class="mt-4">Compawss connects you to all adoptable animals in your country or EU-wide. Our AI Matching System suggests pets that suit your lifestyle and preferences.</p>
+      <img src="images/adopter-match.png" alt="Adoption Match" class="mt-4 w-full rounded shadow">
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-orange-600">🤝 For Volunteers: Help Where It’s Needed Most</h2>
+      <p class="mt-2">See all shelters and organizations seeking help near and far. Choose how and when you volunteer — Compawss makes it meaningful and easy.</p>
+      <img src="images/shelter-support.png" alt="Shelter Support" class="mt-4 w-full rounded shadow">
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-orange-600">📅 For Shelters: Share Events, Reach More People</h2>
+      <p class="mt-2">Promote your adoption fairs, open-door days, and events with our AI booster — reaching more animal lovers effectively.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-orange-600">🐾 For Everyone: A Mission of Animal Welfare</h2>
+      <p class="mt-2">We support animal welfare by reducing overcrowding, reuniting lost pets, and giving visibility to all animals — from dogs and cats to rabbits, reptiles, and birds.</p>
+    </section>
+  </main>
+
+  <footer class="bg-white text-center text-sm p-4 mt-12 shadow-inner">
+    Created with ❤️ by Ava Delmar & Compawss Team
+  </footer>
+
+  <script>
+    function changeLang(lang) {
+      alert("This is a placeholder for language switching: " + lang);
+    }
+  </script>
 </body>
 </html>
-    
