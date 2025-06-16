@@ -1,52 +1,26 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fff8f0;
+  background-color: #fffaf2;
   color: #333;
   margin: 0;
   padding: 0;
 }
 header {
-  background-color: #fff;
-  padding: 20px;
+  background: #ffffff;
+  padding: 1em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 2px solid #eee;
-}
-.logo {
-  height: 60px;
-}
-h1 {
-  color: #3a3a3a;
+  gap: 20px;
 }
 main {
-  padding: 20px;
+  padding: 1em;
 }
-.block {
-  margin-bottom: 40px;
-}
-.section-image {
-  max-width: 100%;
-  margin-top: 10px;
-  border-radius: 10px;
+section {
+  margin-bottom: 2em;
 }
 form {
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-form input, form textarea {
-  width: 100%;
-  margin-bottom: 10px;
-  padding: 8px;
-}
-form button {
-  background: #f97316;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
