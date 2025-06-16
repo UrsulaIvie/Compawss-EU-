@@ -1,55 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compawss - Guiding Every Paw Home</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/translate.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compawss - Guiding Every Paw Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="images/logo.png" alt="Compawss Logo" style="height: 80px;">
-    <h1>Compawss</h1>
-    <select id="language-switcher">
-      <option value="en">English</option>
-      <option value="nl">Nederlands</option>
-      <option value="de">Deutsch</option>
-      <option value="es">Español</option>
-      <option value="fr">Français</option>
-      <option value="pt">Português</option>
-    </select>
-  </header>
-  <main>
-    <section>
-      <h2>🧡 For Adopters: Find the Right Soul, Not Just a Pet</h2>
-      <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
-      <img src="images/adopt1.jpg" alt="Adopt a pet" width="300">
-    </section>
-    <section>
-      <h2>🤝 For Volunteers: Help Where It’s Needed Most</h2>
-      <p>With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
-      <img src="images/volunteers.jpg" alt="Volunteers" width="300">
-    </section>
-    <section>
-      <h2>📅 For Shelters: Share Events, Reach More People</h2>
-      <p>Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and social platforms.</p>
-      <img src="images/events.jpg" alt="Shelter event" width="300">
-    </section>
-    <section>
-      <h2>🐾 For Everyone: A Mission of Animal Welfare</h2>
-      <p>We support shelters, adopters, rescuers, volunteers, and communities with tools to reduce overcrowding and reunite lost animals.</p>
-      <img src="images/mission.jpg" alt="Animal welfare mission" width="300">
-    </section>
-    <section>
-      <h2>💬 Feedback</h2>
-      <form action="https://formspree.io/f/mldngvvg" method="POST">
-        <input type="email" name="email" placeholder="Your email" required>
-        <textarea name="message" placeholder="Your message" required></textarea>
-        <button type="submit">Send Feedback</button>
-      </form>
-    </section>
-  </main>
+    <header>
+        <img src="images/logo.jpg" alt="Compawss Logo" class="logo">
+        <h1>Compawss</h1>
+        <select id="language-select">
+            <option>English</option>
+            <option>Nederlands</option>
+            <option>Deutsch</option>
+            <option>Español</option>
+            <option>Français</option>
+            <option>Português</option>
+        </select>
+    </header>
+    <main>
+        <section class="block">
+            <h2>🧡 For Adopters: Find the Right Soul, Not Just a Pet</h2>
+            <p>Compawss is your companion on the journey to adoption...</p>
+            <img src="images/adopter.jpg" alt="Happy adopter with dog">
+        </section>
+        <section class="block">
+            <h2>🤝 For Volunteers: Help Where It’s Needed Most</h2>
+            <p>Volunteering shouldn’t feel confusing or limited...</p>
+            <img src="images/volunteers.jpg" alt="Group of volunteers with animals">
+        </section>
+        <section class="block">
+            <h2>📅 For Shelters: Share Events, Reach More People</h2>
+            <p>Shelters and rescues often struggle to promote adoption fairs...</p>
+            <img src="images/shelters.jpg" alt="Shelter worker promoting adoption">
+        </section>
+        <section class="block">
+            <h2>🐾 For Everyone: A Mission of Animal Welfare</h2>
+            <p>We support shelters, adopters, rescuers, volunteers...</p>
+            <img src="images/community.jpg" alt="Animals in safe, happy environments">
+        </section>
+    </main>
+    <footer>
+        <h3>Feedback</h3>
+        <form action="https://formspree.io/f/mldngvvg" method="POST">
+            <input type="email" name="email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </footer>
 </body>
 </html>
