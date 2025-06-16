@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss — For All Pets</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Banner -->
+  <div id="feedback-banner" class="banner">
+    <p>Your feedback helps shape a better future for all animals. Share your thoughts below!</p>
+    <button onclick="closeBanner()">X</button>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <img src="20250528_1535_Pet Navigation Logo_remix_01jwbhkxq3fhwrkjmbs1wb8yah.png" alt="Compawss Logo" class="logo" />
+    <nav class="language-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('pt')">PT</button>
+      <button onclick="setLanguage('fr')">FR</button>
+      <button onclick="setLanguage('de')">DE</button>
+      <button onclick="setLanguage('nl')">NL</button>
+      <button onclick="setLanguage('es')">ES</button>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1 data-i18n="hero_title">The Future of Adoption & Animal Welfare</h1>
+    <p data-i18n="hero_sub">Compawss helps match all pets — not just cats and dogs — with the perfect home using AI.</p>
+  </section>
+
+  <!-- About -->
+  <section class="about">
+    <h2 data-i18n="about_title">About Compawss</h2>
+    <p data-i18n="about_text">
+      Compawss is an AI-driven platform designed to improve outcomes for pet adoptions, optimize rescue operations,
+      increase visibility for underrepresented animals (like snakes and rodents), and connect passionate volunteers with shelters.
+      Whether you're seeking a furry friend, a feathered pal, or a scaled companion, Compawss is your guide.
+    </p>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <h2 data-i18n="features_title">What Compawss Does</h2>
+    <ul>
+      <li data-i18n="feature_ai">Smart AI Matching Between Humans and Animals</li>
+      <li data-i18n="feature_rescue">Optimized Rescue and Emergency Coordination</li>
+      <li data-i18n="feature_volunteer">Volunteer Matching and Scheduling Tools</li>
+      <li data-i18n="feature_events">Pet Adoption Events & Awareness Boost</li>
+      <li data-i18n="feature_dashboard">Shelter Analytics & Dashboard Management</li>
+      <li data-i18n="feature_allpets">Inclusivity: Cats, Dogs, Reptiles, Rodents & More</li>
+    </ul>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="gallery">
+    <h2 data-i18n="gallery_title">Our Mission In Images</h2>
+    <div class="image-grid">
+      <img src="03p4mdq9.png" alt="Snake for adoption" />
+      <img src="gt6kw0pt.png" alt="Happy cat" />
+      <img src="20250606_1625_Animal Adoption Match_simple_compose_01jx2szkhseqf87z423p72hjft.png" alt="App match" />
+      <img src="20250606_1615_Animal Shelter Support_simple_compose_01jx2sdqw6eyerek083shypm58.png" alt="Shelter help" />
+      <img src="20250528_1603_Animal Adoption Unity_simple_compose_01jwbk66jxebzsz9kvkcy9fhmy.png" alt="Unity" />
+      <img src="ADOPT PET6.jpg" alt="Dog adoption before and after" />
+      <img src="ADOPTEND8.jfif" alt="Guinea pig closeup" />
+      <img src="ADOPTEND9.jpg" alt="Content cat being petted" />
+      <img src="ADOPTEND10.webp" alt="Volunteer with cat" />
+    </div>
+  </section>
+
+  <!-- Feedback Form -->
+  <section class="feedback">
+    <h2 data-i18n="feedback_title">Leave Your Feedback</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Feedback" required></textarea>
+      <button type="submit" data-i18n="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Compawss. Built with care by Ava Delmar & Team.</p>
+  </footer>
+</body>
+</html>
