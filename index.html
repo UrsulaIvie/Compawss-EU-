@@ -3,75 +3,112 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Compawss</title>
+    <title>Compawss – Guiding Every Paw Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: Arial, sans-serif; background-color: #fdf6f0; color: #333; margin: 0; padding: 20px; }
-        header { background-color: #ff914d; padding: 10px; text-align: left; }
-        header img { height: 60px; }
-        .language-switcher { float: right; }
-        section { margin-bottom: 40px; }
-        h2 { color: #d95d39; }
-        .feedback { background-color: #fff3cd; padding: 15px; border-left: 5px solid #ffbf00; }
-        .image-gallery img { max-width: 200px; margin: 10px; border: 2px solid #ddd; border-radius: 8px; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff9f2;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f3f3f3;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        header img {
+            height: 60px;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            color: #224;
+        }
+        section {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+        section img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .feedback {
+            background-color: #fff0e6;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #ff7744;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        select {
+            float: right;
+            margin: 20px;
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Compawss Logo">
-        <div class="language-switcher">
-            <select onchange="alert('This is a static demo. Real language switching would be here.')">
-                <option>English</option>
-                <option>Français</option>
-                <option>Português</option>
-                <option>Nederlands</option>
-                <option>Deutsch</option>
-                <option>Español</option>
-            </select>
-        </div>
+        <img src="images/Schermafbeelding 2025-06-16 140523.png" alt="Compawss Logo">
+        <h1>Compawss</h1>
+        <select>
+            <option>English</option>
+            <option>Nederlands</option>
+            <option>Deutsch</option>
+            <option>Español</option>
+            <option>Français</option>
+            <option>Português</option>
+        </select>
     </header>
-
     <section>
         <h2>🧡 For Adopters: Find the Right Soul, Not Just a Pet</h2>
         <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
         <p>🐾 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit.</p>
-        <p>Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.</p>
-    </section>
+        <img src="images/20250528_1535_Pet Navigation Logo_remix_01jwbhkxq3fhwrkjmbs1wb8yah.png" alt="Adoption">
 
-    <section>
         <h2>🤝 For Volunteers: Help Where It’s Needed Most</h2>
-        <p>With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
-    </section>
+        <p>Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
+        <p>Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter.</p>
+        <img src="images/Schermafbeelding 2025-06-16 144800.png" alt="Volunteering Group">
 
-    <section>
         <h2>📅 For Shelters: Share Events, Reach More People</h2>
-        <p>Compawss solves that with a built-in AI event booster to promote adoption fairs, open-door days, or fundraising events.</p>
-    </section>
+        <p>Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster.</p>
+        <img src="images/gt6kw0pt.png" alt="App Interface">
 
-    <section>
         <h2>🐾 For Everyone: A Mission of Animal Welfare</h2>
-        <p>We support shelters, adopters, rescuers, volunteers, and communities with tools to:</p>
-        <ul>
-            <li>Reduce overcrowding</li>
-            <li>Reunite lost animals faster</li>
-            <li>Give visibility to “less adoptable” pets</li>
-            <li>Connect people and animals in meaningful ways</li>
-        </ul>
-    </section>
+        <p>We support shelters, adopters, rescuers, volunteers, and communities with tools to reduce overcrowding, reunite lost animals faster, and give visibility to “less adoptable” pets.</p>
+        <img src="images/Schermafbeelding 2025-06-16 174525.png" alt="Animal Care Volunteer">
 
-    <section class="image-gallery">
-        <h2>📸 See What We Do</h2>
-        <img src="photo1.jpg" alt="Adoption 1">
-        <img src="photo2.jpg" alt="Adoption 2">
-        <img src="photo3.jpg" alt="Adoption 3">
+        <div class="feedback">
+            <h3>We’d love your feedback!</h3>
+            <form action="https://formspree.io/f/mldngvvg" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" rows="4" placeholder="Tell us what you think..."></textarea>
+                <button type="submit">Send Feedback</button>
+            </form>
+        </div>
     </section>
-
-    <section class="feedback">
-        <h2>💬 Your Feedback Matters</h2>
-        <p>We’re building Compawss together with the community. <a href="https://formspree.io/f/mldngvvg" target="_blank">Leave your thoughts here</a> — every message helps us improve.</p>
-    </section>
-
-    <footer>
-        <p>Made with ❤️ by Ava Delmar and the Compawss project.</p>
-    </footer>
 </body>
 </html>
