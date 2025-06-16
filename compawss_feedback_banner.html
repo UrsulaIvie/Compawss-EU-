@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss - AI for All Animals</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --logo-color: #FF9F68;
+    }
+    .text-logo-color {
+      color: var(--logo-color);
+    }
+    .bg-logo-color {
+      background-color: var(--logo-color);
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Banner / Pop-up for Feedback -->
+  <div class="fixed top-0 left-0 w-full bg-yellow-200 text-black text-center py-3 px-4 z-50 shadow-md">
+    <p class="font-semibold">🐾 Compawss is in early testing! <a href="#contact" class="underline hover:text-blue-600">We’d love your feedback — click here! 💬</a></p>
+  </div>
+  <div class="pt-20">
+
+  <!-- Header -->
+  <header class="text-center py-10 px-4">
+    <h1 class="text-4xl font-bold text-logo-color">Welcome to Compawss 🐾</h1>
+    <p class="mt-2 text-lg">AI-enhanced adoption for all animals — not just cats and dogs!</p>
+  </header>
+
+  <!-- Contact Section -->
+  <section id="contact" class="bg-gray-100 py-10 px-4">
+    <h2 class="text-2xl font-bold mb-4">💬 Contact & Feedback</h2>
+    <form action="https://formspree.io/f/mldngvvg" method="POST" class="max-w-xl mx-auto space-y-4">
+      <input type="text" name="name" placeholder="Your name" class="w-full border border-gray-300 px-4 py-2" required>
+      <input type="email" name="email" placeholder="Your email" class="w-full border border-gray-300 px-4 py-2" required>
+      <textarea name="message" rows="4" placeholder="Your message or feedback" class="w-full border border-gray-300 px-4 py-2" required></textarea>
+      <button type="submit" class="bg-logo-color text-white px-6 py-2 rounded hover:bg-opacity-90">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-600 py-6">
+    Built with ❤️ by Ursula & Ava Delmar · Multilingual · Compassionate · Community First
+  </footer>
+
+  </div>
+</body>
+</html>
