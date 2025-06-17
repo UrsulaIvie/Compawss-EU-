@@ -1,1 +1,96 @@
-<!-- English placeholder -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss - Guiding Every Paw Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Compawss Logo" class="logo" />
+    <h1>Welcome to Compawss</h1>
+    <div class="language-selector">
+      <label for="language">Language:</label>
+      <select id="language" onchange="changeLanguage()">
+        <option value="index.html" selected>English</option>
+        <option value="index.nl.html">Nederlands</option>
+        <option value="index.pt.html">Português</option>
+        <option value="index.de.html">Deutsch</option>
+        <option value="index.fr.html">Français</option>
+        <option value="index.es.html">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>🧡 For Adopters: Find the Right Soul, Not Just a Pet</h2>
+      <p>
+        Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.
+      </p>
+      <p>
+        🐞 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit.
+      </p>
+      <p>
+        Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.
+      </p>
+      <img src="images/adopter.jpg" alt="Adopter with dog" />
+    </section>
+
+    <section>
+      <h2>🤝 For Volunteers: Help Where It’s Needed Most</h2>
+      <p>
+        Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.
+      </p>
+      <p>
+        Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter — from walking dogs, caring for exotic animals, helping at events, or supporting online operations.
+      </p>
+      <p>You choose when and how you give your time — and we make sure it counts.</p>
+      <img src="images/volunteers.jpg" alt="Volunteers with animals" />
+    </section>
+
+    <section>
+      <h2>🏢 For Shelters: Share Events, Reach More People</h2>
+      <p>
+        Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and social platforms, reaching people who care.
+      </p>
+      <p>Your local event deserves visibility — and your animals deserve a chance.</p>
+      <img src="images/events.jpg" alt="Animal adoption event" />
+    </section>
+
+    <section>
+      <h2>🌿 For Everyone: A Mission of Animal Welfare</h2>
+      <p>
+        At Compawss, we believe every animal deserves love, care, and a home. With the help of AI, we make the search for meaningful connections faster, smarter, and more inclusive. We care for animals of all kinds — cats, dogs, rabbits, snakes, iguanas, chinchillas, and more.
+      </p>
+      <img src="images/community.jpg" alt="Diverse group of volunteers with animals" />
+    </section>
+
+    <section class="feedback">
+      <h2>📢 We’d love your feedback!</h2>
+      <form action="https://formspree.io/f/mzzgvbpa" method="POST">
+        <label for="email">Your email:</label>
+        <input type="email" name="email" required />
+
+        <label for="message">Your message:</label>
+        <textarea name="message" rows="4" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Ava Delmar and Ursula Ivie · Thank you for supporting animal welfare.</p>
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      window.location.href = lang;
+    }
+  </script>
+</body>
+</html>
