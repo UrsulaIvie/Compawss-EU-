@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compawss</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <img src="logo.jpg" alt="Compawss logo" />
+    <h1>Welcome to Compawss</h1>
+    <label for="lang">Language:</label>
+    <select id="lang" onchange="switchLanguage()">
+      <option value="en">English</option>
+      <option value="nl">Nederlands</option>
+      <option value="pt">Português</option>
+      <option value="de">Deutsch</option>
+      <option value="fr">Français</option>
+      <option value="es">Español</option>
+    </select>
+  </header>
+
+  <main>
+    <section>
+      <h2>💕 For Adopters: Find the Right Soul, Not Just a Pet</h2>
+      <p>Compawss is your companion in the adoption journey. We connect you to all adoptable animals listed in shelters in your country — or in the case of the EU, in any participating country.</p>
+      <p>🐞 But we go beyond lists. With our AI Matchmaking System, we learn about your lifestyle, energy level, family environment and wishes — and suggest animals whose personalities and needs match yours beautifully.</p>
+      <p>Whether you dream of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit or even a calm reptile — Compawss helps you find the one who’s waiting for you.</p>
+      <img src="adopter.jpg" alt="Adopter and pet"/>
+    </section>
+
+    <section>
+      <h2>🤝 For Volunteers: Help Where It’s Most Needed</h2>
+      <p>Volunteering doesn't have to be confusing or limited. With Compawss, you can see all shelters and organizations currently seeking help — both locally and internationally.</p>
+      <p>Whether you have one hour a week, a special skill, or simply a big heart, Compawss connects you with volunteer tasks that matter — from walking dogs, caring for exotic pets, assisting at events or helping online.</p>
+      <p>You choose when and how to give your time — and we make sure it has impact.</p>
+      <img src="volunteers.jpg" alt="Volunteers with animals"/>
+    </section>
+
+    <section>
+      <h2>🏢 For Shelters: Share Events and Reach More People</h2>
+      <p>Shelters and rescues often struggle to spread the word about adoption fairs, open-door days or fundraisers. Compawss fixes that with our AI-powered event booster: enter your event, and we help share it in communities and social media, reaching the people who care.</p>
+      <p>Your event deserves visibility — and your animals deserve a chance.</p>
+      <img src="events.jpg" alt="Shelter event"/>
+    </section>
+
+    <section>
+      <h2>🌿 For Everyone: An Animal Welfare Mission</h2>
+      <p>At Compawss, we believe every animal deserves love, care and a home. With AI’s help, we make finding meaningful connections faster, smarter and more inclusive. We care for animals of all kinds — cats, dogs, rabbits, snakes, iguanas, chinchillas and more.</p>
+      <img src="community.jpg" alt="Community with animals"/>
+    </section>
+
+    <section class="feedback">
+      <h2>📢 We'd love to hear from you!</h2>
+      <form action="https://formspree.io/f/mzzgvbpa" method="POST">
+        <label for="email">Your email:</label>
+        <input type="email" name="email" required />
+        <label for="message">Your message:</label>
+        <textarea name="message" rows="4" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made with ❤️ by Ava Delmar and Ursula Ivie · Thank you for supporting animal welfare.</p>
+  </footer>
+
+  <script>
+    function switchLanguage() {
+      const lang = document.getElementById("lang").value;
+      if (lang === "en") {
+        window.location.href = "index.html";
+      } else if (lang === "nl") {
+        window.location.href = "index.nl.html";
+      } else if (lang === "pt") {
+        window.location.href = "index.pt.html";
+      } else if (lang === "de") {
+        window.location.href = "index.de.html";
+      } else if (lang === "fr") {
+        window.location.href = "index.fr.html";
+      } else if (lang === "es") {
+        window.location.href = "index.es.html";
+      }
+    }
+  </script>
+</body>
+</html>
