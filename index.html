@@ -43,18 +43,40 @@
             right: 20px;
             top: 20px;
         }
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            max-width: 500px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="lang-select">
         <label for="lang">🌐 Language: </label>
         <select id="lang">
-            <option>English</option>
-            <option>Nederlands</option>
-            <option>Deutsch</option>
-            <option>Français</option>
-            <option>Español</option>
-            <option>Português</option>
+            <option value="en">English</option>
+            <option value="nl">Nederlands</option>
+            <option value="de">Deutsch</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="pt">Português</option>
         </select>
     </div>
 
@@ -65,24 +87,30 @@
 
     <div class="section">
         <h2>🧡 For Adopters: Find the Right Soul, Not Just a Pet</h2>
-        <p>Compawss is your companion on the journey to adoption...</p>
-        <img src="images/adopter.jpg" alt="Adopter and Dog">
+        <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
+        <p>🐾 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit. No more scrolling endlessly or missing out on that one special companion.</p>
+        <p>Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.</p>
+        <img src="images/adopter.jpg" alt="Adopter with dog">
     </div>
 
     <div class="section">
         <h2>🤝 For Volunteers: Help Where It’s Needed Most</h2>
-        <p>Volunteering shouldn’t feel confusing or limited...</p>
-        <img src="images/volunteers.jpg" alt="Volunteers with Pets">
+        <p>Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
+        <p>Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter — from walking dogs, caring for exotic animals, helping at events, or supporting online operations.</p>
+        <p>You choose when and how you give your time — and we make sure it counts.</p>
+        <img src="images/volunteers.jpg" alt="Volunteers with animals">
     </div>
 
     <div class="section">
         <h2>📅 For Shelters: Share Events, Reach More People</h2>
-        <p>Shelters and rescues often struggle to promote adoption fairs...</p>
-        <img src="images/events.jpg" alt="Event Promotion">
+        <p>Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and social platforms, reaching people who care.</p>
+        <p>Your local event deserves visibility — and your animals deserve a chance.</p>
+        <img src="images/events.jpg" alt="Shelter worker promoting adoption">
     </div>
 
     <div class="section">
         <h2>🐾 For Everyone: A Mission of Animal Welfare</h2>
+        <p>Compawss believes every animal deserves a voice — and a future. We support shelters, adopters, rescuers, volunteers, and communities with tools to:</p>
         <ul>
             <li>Reduce overcrowding</li>
             <li>Reunite lost animals faster</li>
@@ -93,8 +121,19 @@
         <img src="images/community.jpg" alt="Animal Community">
     </div>
 
+    <div class="section">
+        <h2>📢 We’d love your feedback!</h2>
+        <form>
+            <label for="email">Your email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Your message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
     <footer>
-        Made with ❤️ by Ava Delmar · We'd love your feedback! Reach us via the contact form.
+        Made with ❤️ by Ava Delmar · Thank you for supporting animal welfare.
     </footer>
 </body>
 </html>
