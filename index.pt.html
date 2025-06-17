@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Compawss - Guiando Cada Pata para o Lar</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="images/logo.jpg" alt="Logo Compawss" class="logo" />
+    <h1>Bem-vindo ao Compawss</h1>
+    <div class="language-selector">
+      <label for="language">Idioma:</label>
+      <select id="language" onchange="changeLanguage()">
+        <option value="index.html">English</option>
+        <option value="index.nl.html">Nederlands</option>
+        <option value="index.pt.html" selected>Português</option>
+        <option value="index.de.html">Deutsch</option>
+        <option value="index.fr.html">Français</option>
+        <option value="index.es.html">Español</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>💕 Para Adotantes: Encontre a Alma Certa, Não Apenas um Pet</h2>
+      <p>
+        O Compawss é seu companheiro na jornada da adoção. Conectamos você a todos os animais adotáveis listados em abrigos do seu país — ou, no caso da União Europeia, de todos os países participantes.
+      </p>
+      <p>
+        🐞 Mas vamos além das listas. Com nosso Sistema de Correspondência com IA, aprendemos sobre seu estilo de vida, nível de energia, ambiente familiar e desejos — e sugerimos animais cujas personalidades e necessidades combinam perfeitamente.
+      </p>
+      <p>
+        Seja você sonhando com um gato idoso, um cão alegre, um papagaio esperto, um coelho carinhoso ou até mesmo um réptil tranquilo — o Compawss ajuda você a encontrar aquele que está esperando por você.
+      </p>
+      <img src="images/adopter.jpg" alt="Adotante com cão" />
+    </section>
+
+    <section>
+      <h2>🤝 Para Voluntários: Ajude Onde É Mais Necessário</h2>
+      <p>
+        Ser voluntário não precisa ser confuso ou limitado. Com o Compawss, você pode ver todos os abrigos e organizações que estão atualmente buscando ajuda, tanto no seu país quanto em outros.
+      </p>
+      <p>
+        Tenha você uma hora por semana, um talento especial ou apenas um grande coração, o Compawss conecta você com tarefas voluntárias que realmente importam — desde passear com cães, cuidar de animais exóticos, ajudar em eventos ou colaborar com operações online.
+      </p>
+      <p>Você escolhe quando e como doar seu tempo — e garantimos que ele tenha impacto.</p>
+      <img src="images/volunteers.jpg" alt="Voluntários com animais" />
+    </section>
+
+    <section>
+      <h2>🏢 Para Abrigos: Divulgue Eventos e Alcance Mais Pessoas</h2>
+      <p>
+        Abrigos e resgates muitas vezes enfrentam dificuldades para divulgar feiras de adoção, dias de portas abertas ou campanhas de arrecadação. O Compawss resolve isso com nosso impulsionador de eventos com IA: insira seu evento e ajudamos a compartilhá-lo em comunidades e redes sociais, alcançando quem realmente importa.
+      </p>
+      <p>Seu evento merece visibilidade — e seus animais merecem uma chance.</p>
+      <img src="images/events.jpg" alt="Evento de adoção animal" />
+    </section>
+
+    <section>
+      <h2>🌿 Para Todos: Uma Missão de Bem-Estar Animal</h2>
+      <p>
+        No Compawss, acreditamos que todo animal merece amor, cuidado e um lar. Com a ajuda da IA, tornamos a busca por conexões significativas mais rápida, inteligente e inclusiva. Cuidamos de animais de todos os tipos — gatos, cães, coelhos, cobras, iguanas, chinchilas e muito mais.
+      </p>
+      <img src="images/community.jpg" alt="Grupo diverso de voluntários com animais" />
+    </section>
+
+    <section class="feedback">
+      <h2>📢 Adoraríamos saber sua opinião!</h2>
+      <form action="https://formspree.io/f/mzzgvbpa" method="POST">
+        <label for="email">Seu e-mail:</label>
+        <input type="email" name="email" required />
+
+        <label for="message">Sua mensagem:</label>
+        <textarea name="message" rows="4" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Feito com ❤️ por Ava Delmar e Ursula Ivie &middot; Obrigado por apoiar o bem-estar animal.</p>
+  </footer>
+
+  <script>
+    function changeLanguage() {
+      const lang = document.getElementById("language").value;
+      window.location.href = lang;
+    }
+  </script>
+</body>
+</html>
