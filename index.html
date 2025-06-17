@@ -37,7 +37,7 @@
 
   <div class="section">
     <h2>📢 We’d love your feedback!</h2>
-    <form action="https://formspree.io/f/xbjnlgav" method="POST" onsubmit="submitForm(event)">
+    <form action="https://formspree.io/f/xbjnlgav" method="POST">
       <label for="email">Your email:</label><br>
       <input type="email" id="email" name="email" required><br>
       <label for="message">Your message:</label><br>
@@ -54,6 +54,7 @@
   </footer>
 
   <script>
+// Only handles language switching now
     const content = {"en": {"welcome": "Welcome to Compawss", "adopters_title": "\ud83e\udde1 For Adopters: Find the Right Soul, Not Just a Pet", "adopters_text": ["Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country \u2014 or, in the case of the European Union, from shelters in every participating country.", "\ud83d\udc3e But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes \u2014 then gently suggest pets whose personalities and needs are a perfect fit. No more scrolling endlessly or missing out on that one special companion.", "Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile \u2014 Compawss helps you find the one who\u2019s been waiting just for you."], "volunteers_title": "\ud83e\udd1d For Volunteers: Help Where It\u2019s Needed Most", "volunteers_text": ["Volunteering shouldn\u2019t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.", "Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter \u2014 from walking dogs, caring for exotic animals, helping at events, or supporting online operations.", "You choose when and how you give your time \u2014 and we make sure it counts."], "shelters_title": "\ud83d\udcc5 For Shelters: Share Events, Reach More People", "shelters_text": ["Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we\u2019ll help share it across communities and social platforms, reaching people who care.", "Your local event deserves visibility \u2014 and your animals deserve a chance."], "mission_title": "\ud83d\udc3e For Everyone: A Mission of Animal Welfare", "mission_text": ["Compawss believes every animal deserves a voice \u2014 and a future. We support shelters, adopters, rescuers, volunteers, and communities with tools to:"], "mission_list": ["Reduce overcrowding", "Reunite lost animals faster", "Give visibility to \u201cless adoptable\u201d pets", "Connect people and animals in meaningful ways", "Strengthen the circle of compassion globally"]}, "nl": {"welcome": "Welkom bij Compawss", "adopters_title": "\ud83e\udde1 Voor Adoptanten: Vind de Juiste Ziel, Niet Alleen een Huisdier", "adopters_text": ["Compawss is je metgezel op de weg naar adoptie. We verbinden je met alle adopteerbare dieren in opvangcentra in jouw land \u2014 of, in het geval van de Europese Unie, uit alle deelnemende landen.", "\ud83d\udc3e Maar we gaan verder dan lijsten. Met ons AI-Matchingssysteem leren we over jouw levensstijl, energieniveau, thuissituatie en wensen \u2014 en stellen dan huisdieren voor die qua karakter en behoeften perfect passen.", "Of je nu droomt van een oudere kat, een vrolijke hond, een slimme papegaai, een knuffelkonijn of zelfs een rustige reptiel \u2014 Compawss helpt je degene te vinden die op jou wacht."], "volunteers_title": "\ud83e\udd1d Voor Vrijwilligers: Help Waar Het Nodig Is", "volunteers_text": ["Vrijwilligerswerk hoeft niet verwarrend of beperkt te zijn. Met Compawss zie je welke opvangcentra en organisaties hulp zoeken, zowel in eigen land als over de grens.", "Of je nu een uur per week hebt, een speciale vaardigheid of gewoon een groot hart \u2014 Compawss matcht je met vrijwilligerswerk dat echt een verschil maakt.", "Jij kiest wanneer en hoe je helpt \u2014 wij zorgen dat het telt."], "shelters_title": "\ud83d\udcc5 Voor Opvangcentra: Deel Evenementen, Bereik Meer Mensen", "shelters_text": ["Opvangcentra hebben het vaak moeilijk om adoptiedagen of inzamelacties te promoten. Compawss lost dit op met een ingebouwde AI-promotietool die jouw evenement deelt in relevante netwerken.", "Jouw lokale evenement verdient zichtbaarheid \u2014 en jouw dieren verdienen een kans."], "mission_title": "\ud83d\udc3e Voor Iedereen: Een Missie voor Dierenwelzijn", "mission_text": ["Compawss vindt dat elk dier een stem verdient \u2014 en een toekomst. We ondersteunen opvangcentra, adoptanten, redders en vrijwilligers met tools om:"], "mission_list": ["Overbevolking verminderen", "Dieren sneller herenigen met hun baasje", "Zichtbaarheid geven aan 'moeilijker plaatsbare' dieren", "Mensen en dieren op betekenisvolle wijze verbinden", "De cirkel van compassie wereldwijd versterken"]}};
 
     function createSection(title, paragraphs, image = null, list = null) {
@@ -82,27 +83,7 @@
     }
 
     switchLanguage(); // Load default language on page load
-  
-    function submitForm(event) {
-      event.preventDefault();
-      const form = event.target;
-      const data = new FormData(form);
-      fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          document.getElementById("form-status").innerText = "Thank you! Your message has been sent.";
-          form.reset();
-        } else {
-          document.getElementById("form-status").innerText = "Oops! Something went wrong. Please try again.";
-        }
-      }).catch(() => {
-        document.getElementById("form-status").innerText = "Error sending form. Please try again later.";
-      });
-    }
-    </script>
+      </script>
     
 </body>
 </html>
