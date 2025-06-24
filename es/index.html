@@ -4,62 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compawss - Cada pata importa</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../style.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       background-color: #fffaf1;
+      font-family: sans-serif;
     }
+
     .header {
       background-color: #fdf6ef;
-      padding: 10px 20px;
       border-bottom: 2px solid #e0cfa6;
-      position: relative;
-      z-index: 10;
+      padding: 10px 20px;
     }
+
     .header-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
+
     .logo {
       flex: 1;
       text-align: left;
     }
+
     .logo img {
-      height: 120px;
+      height: 200px;
       width: auto;
+      display: block;
     }
+
     .main-nav {
       flex: 2;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
     }
+
     .main-nav ul {
       list-style: none;
       display: flex;
+      gap: 30px;
       justify-content: center;
-      gap: 20px;
-      padding-left: 0;
+      flex-wrap: wrap;
     }
+
     .main-nav li a {
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px;
     }
+
     .main-nav li a:hover {
       color: #da8f3f;
     }
+
     .language-switcher {
-      position: absolute;
-      top: 20px;
-      right: 30px;
+      margin-left: auto;
+      margin-right: 10px;
+      align-self: flex-start;
     }
+
     .language-switcher select {
       padding: 0;
       font-size: 14px;
@@ -69,24 +82,35 @@
       color: #333;
       cursor: pointer;
     }
+
     .hero {
       text-align: center;
-      margin: 20px 0;
+      margin: 0;
     }
+
     .hero img {
       width: 100%;
       max-height: 800px;
       object-fit: cover;
     }
+
     .hero-text {
       margin-top: 30px;
       padding: 20px;
       text-align: center;
     }
+
     .hero-text h1 {
-      font-size: 3em;
+      font-size: 5em;
       margin-bottom: 40px;
     }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.8em;
+      }
+    }
+
     .hero-text .content {
       max-width: 1000px;
       margin: 0 auto;
@@ -94,6 +118,7 @@
       line-height: 1.8;
       font-size: 1.1em;
     }
+
     .block {
       display: flex;
       align-items: center;
@@ -101,37 +126,35 @@
       padding: 50px 80px;
       border-bottom: 1px solid #eee;
       background-color: #fff3dd;
+      flex-wrap: wrap;
     }
+
     .block.reverse {
       flex-direction: row-reverse;
     }
+
     .block img {
       width: 45%;
       border-radius: 8px;
+      max-width: 100%;
     }
+
     .block div {
       width: 55%;
+      min-width: 300px;
     }
+
     .footer {
       background: #ffe7b6;
       text-align: center;
       padding: 20px;
     }
+
     .social-links a {
       color: #444;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
-    }
-    @media screen and (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
     }
   </style>
 </head>
@@ -141,16 +164,6 @@
       <div class="logo">
         <img src="../images/logo-central.png" alt="Logo de Compawss" />
       </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="about.html">Sobre</a></li>
-          <li><a href="history.html">Historia</a></li>
-          <li><a href="signup.html">Registrarse</a></li>
-          <li><a href="partners.html">Socios</a></li>
-          <li><a href="app.html">Próximamente</a></li>
-        </ul>
-      </nav>
       <div class="language-switcher">
         <label for="language-select">🌍</label>
         <select id="language-select">
@@ -163,6 +176,16 @@
         </select>
       </div>
     </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../es/index.html">Inicio</a></li>
+        <li><a href="../es/about.html">Sobre</a></li>
+        <li><a href="../es/history.html">Historia</a></li>
+        <li><a href="../es/signup.html">Registrarse</a></li>
+        <li><a href="../es/partners.html">Socios</a></li>
+        <li><a href="../es/app.html">Próximamente</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero">
@@ -229,7 +252,7 @@
     document.getElementById("language-select").addEventListener("change", function () {
       const lang = this.value;
       if (lang === "en") {
-        window.location.href = "/";
+        window.location.href = "/index.html";
       } else {
         window.location.href = `/${lang}/index.html`;
       }
