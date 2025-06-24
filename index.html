@@ -26,7 +26,7 @@
     .header-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
 
@@ -36,15 +36,16 @@
     }
 
     .logo img {
-      height: 160px;
+      height: 200px;
       width: auto;
       display: block;
     }
 
     .main-nav {
       flex: 2;
-      text-align: center;
-      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
     }
 
     .main-nav ul {
@@ -104,6 +105,12 @@
       margin-bottom: 40px;
     }
 
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.8em;
+      }
+    }
+
     .hero-text .content {
       max-width: 1000px;
       margin: 0 auto;
@@ -158,16 +165,6 @@
       <div class="logo">
         <img src="images/logo-central.png" alt="Compawss Logo" />
       </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="app.html">Coming Soon</a></li>
-        </ul>
-      </nav>
       <div class="language-switcher">
         <label for="language-select">🌍</label>
         <select id="language-select">
@@ -180,6 +177,16 @@
         </select>
       </div>
     </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="history.html">History</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="partners.html">Partners</a></li>
+        <li><a href="app.html">Coming Soon</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="hero">
@@ -190,6 +197,7 @@
     <h1>Welcome to Compawss</h1>
   </section>
 
+  <!-- BLOCO 1 -->
   <section class="block">
     <img src="images/adopters.jpg" alt="Adoption" />
     <div>
@@ -200,6 +208,7 @@
     </div>
   </section>
 
+  <!-- BLOCO 2 -->
   <section class="block reverse">
     <img src="images/volunteers.jpg" alt="Volunteering" />
     <div>
@@ -209,6 +218,7 @@
     </div>
   </section>
 
+  <!-- BLOCO 3 -->
   <section class="block">
     <img src="images/shelters-events.jpg" alt="Events" />
     <div>
@@ -218,6 +228,7 @@
     </div>
   </section>
 
+  <!-- BLOCO 4 -->
   <section class="block reverse">
     <img src="images/mission.jpg" alt="Mission" />
     <div>
