@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - Compawss</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-color: #fffaf1;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .signup-container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 40px;
+      background-color: #fff3dd;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.4em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    p {
+      text-align: center;
+      font-size: 1.1em;
+      color: #555;
+      margin-bottom: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+    input, select, textarea {
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+    button {
+      padding: 12px;
+      background-color: #da8f3f;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #c67f34;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h1>Sign Up for Compawss</h1>
+    <p>If you are a shelter, a volunteer, or want to support the animal cause, please fill out the form below. We are building a strong and empathetic network with the help of technology — and your involvement makes all the difference.</p>
+    <form action="https://formspree.io/f/mzbqeznn" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="type">Participation Type:</label>
+      <select id="type" name="type">
+        <option value="shelter">Shelter</option>
+        <option value="volunteer">Volunteer</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" name="location" placeholder="City, Country" required>
+
+      <label for="message">Message (optional):</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
