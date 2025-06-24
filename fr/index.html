@@ -1,139 +1,102 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compawss - Chaque patte compte</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    .header {
-      background-color: #fdf6ef;
-      padding: 10px 20px;
-      border-bottom: 2px solid #e0cfa6;
-      position: relative;
-      z-index: 10;
-    }
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .logo {
-      flex: 1;
-      text-align: left;
-    }
-    .logo img {
-      height: 120px;
-      width: auto;
-    }
-    .main-nav {
-      flex: 2;
-      text-align: center;
-    }
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding-left: 0;
-    }
-    .main-nav li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 18px;
-    }
-    .language-switcher {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-    }
-    .language-switcher select {
-      padding: 0;
-      font-size: 14px;
-      border: none;
-      background: transparent;
-      font-weight: bold;
-      color: #333;
-      cursor: pointer;
-    }
-    .hero {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .hero img {
-      width: 100%;
-      max-height: 800px;
-      object-fit: cover;
-    }
-    .hero-text {
-      margin-top: 30px;
-      padding: 20px;
-      text-align: center;
-    }
-    .hero-text h1 {
-      font-size: 3em;
-      margin-bottom: 40px;
-    }
-    .hero-text .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: justify;
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
-    .block {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 50px 80px;
-      border-bottom: 1px solid #eee;
-      background-color: #fff3dd;
-    }
-    .block.reverse {
-      flex-direction: row-reverse;
-    }
-    .block img {
-      width: 45%;
-      border-radius: 8px;
-    }
-    .block div {
-      width: 55%;
-    }
-    .footer {
-      background: #ffe7b6;
-      text-align: center;
-      padding: 20px;
-    }
-    .social-links a {
-      color: #444;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    body {
-      background-color: #fffaf1;
-    }
-    .main-nav li a:hover {
-      color: #da8f3f;
-    }
-    @media screen and (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .main-nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
-</head>
 <body>
-<!-- restante do corpo permanece igual -->
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="../images/logo-central.png" alt="Logo Compawss" />
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="history.html">Histoire</a></li>
+          <li><a href="signup.html">Inscription</a></li>
+          <li><a href="partners.html">Partenaires</a></li>
+          <li><a href="app.html">Bientôt</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <label for="language-select">🌍</label>
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+          <option value="nl">NL</option>
+          <option value="fr" selected>FR</option>
+          <option value="es">ES</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <img src="../images/hero-image.jpg" alt="Animaux de toutes sortes" />
+  </section>
+
+  <section class="hero-text">
+    <h1>Bienvenue sur Compawss</h1>
+  </section>
+
+  <section class="block">
+    <img src="../images/adopters.jpg" alt="Adoption" />
+    <div>
+      <p>🧡 <strong>Pour les adoptants : Trouvez une âme, pas seulement un animal</strong></p>
+      <p>Compawss vous accompagne dans votre parcours d'adoption. Nous vous connectons à tous les animaux adoptables de votre pays — ou dans toute l'Union européenne grâce aux refuges participants.</p>
+      <p>🐾 Et nous allons plus loin. Grâce à notre système d'appariement par IA, nous apprenons à connaître votre mode de vie, votre niveau d'énergie, votre environnement et vos souhaits — puis nous suggérons des animaux qui vous correspondent parfaitement.</p>
+      <p>Chat âgé, chien joyeux, perroquet malin, lapin affectueux ou même reptile paisible — Compawss vous aide à rencontrer celui qui vous attend.</p>
+    </div>
+  </section>
+
+  <section class="block reverse">
+    <img src="../images/volunteers.jpg" alt="Bénévolat" />
+    <div>
+      <p>🤝 <strong>Pour les bénévoles : Aidez là où c'est le plus nécessaire</strong></p>
+      <p>Le bénévolat ne doit pas être compliqué. Avec Compawss, vous voyez tous les refuges et associations en demande — localement ou à l'international.</p>
+      <p>Que vous ayez une heure par semaine, une compétence spécifique ou juste un grand cœur — Compawss vous met en lien avec les missions qui comptent vraiment.</p>
+      <p>Vous choisissez comment et quand aider — nous faisons en sorte que votre impact soit réel.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <img src="../images/shelters-events.jpg" alt="Événements" />
+    <div>
+      <p>📅 <strong>Pour les refuges : Partagez vos événements, touchez plus de monde</strong></p>
+      <p>Beaucoup de refuges peinent à faire connaître leurs journées d'adoption ou collectes. Compawss propose un booster IA intégré : publiez votre événement et nous le diffusons.</p>
+      <p>Votre événement mérite d'être vu — et vos animaux, une chance.</p>
+    </div>
+  </section>
+
+  <section class="block reverse">
+    <img src="../images/mission.jpg" alt="Mission" />
+    <div>
+      <p>🐾 <strong>Pour tous : Une mission de bien-être animal</strong></p>
+      <p>Compawss croit que chaque animal mérite une voix — et un avenir. Nous aidons les communautés à :</p>
+      <ul>
+        <li>Réduire la surpopulation</li>
+        <li>Réunir les animaux perdus</li>
+        <li>Donner de la visibilité aux animaux souvent oubliés</li>
+        <li>Créer des liens forts entre humains et animaux</li>
+        <li>Renforcer la compassion à l'échelle mondiale</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Compawss. Créé avec ❤️ par Ava & Ursula.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/compawss.br" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/compawssbr" target="_blank">Facebook</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("language-select").addEventListener("change", function () {
+      const lang = this.value;
+      if (lang === "en") {
+        window.location.href = "/";
+      } else {
+        window.location.href = `/${lang}/index.html`;
+      }
+    });
+  </script>
+</body>
+
