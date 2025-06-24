@@ -11,21 +11,14 @@
       padding: 0;
       box-sizing: border-box;
     }
-    .header {
-      background-color: #fdf6ef;
-      padding: 10px 20px;
-      border-bottom: 2px solid #e0cfa6;
-      position: relative;
-      z-index: 10;
-    }
-   .header-container {
+    .header-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-    }
-   .logo {
+.logo {
   flex: 1;
   text-align: left;
 }
@@ -36,27 +29,18 @@
   display: block;
 }
 
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-   .nav-wrapper {
-  width: 100%;
+.nav-wrapper {
+  flex: 2;
   text-align: center;
   margin-top: 10px;
 }
 
-.main-nav ul {
-  list-style: none;
-  display: inline-flex;
-  gap: 30px;
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  right: 30px;
 }
-
-.main-nav li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
+nt-weight: bold;
   font-size: 18px;
 }
 
