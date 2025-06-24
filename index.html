@@ -11,54 +11,65 @@
       padding: 0;
       box-sizing: border-box;
     }
+
+    .header {
+      background-color: #fdf6ef;
+      padding: 10px 20px;
+      border-bottom: 2px solid #e0cfa6;
+      position: relative;
+      z-index: 10;
+    }
+
     .header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
 
-.logo {
-  flex: 1;
-  text-align: left;
-}
+    .logo {
+      flex: 1;
+      text-align: left;
+    }
 
-.logo img {
-  height: 200px;
-  width: auto;
-  display: block;
-}
+    .logo img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
 
-.nav-wrapper {
-  flex: 2;
-  text-align: center;
-  margin-top: 10px;
-}
+    .nav-and-lang {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-.language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
-nt-weight: bold;
-  font-size: 18px;
-}
-
-.language-switcher {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-}
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
 
     .main-nav li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 22px;}
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      font-size: 20px;
     }
+
+    .main-nav li a:hover {
+      color: #da8f3f;
+    }
+
     .language-switcher {
-      margin-left: 20px;
+      margin-top: 8px;
+      text-align: center;
     }
+
     .language-switcher select {
       padding: 0;
       font-size: 14px;
@@ -68,24 +79,29 @@ nt-weight: bold;
       color: #333;
       cursor: pointer;
     }
+
     .hero {
       text-align: center;
-      margin:60px 0;
+      margin: 60px 0;
     }
+
     .hero img {
       width: 100%;
       max-height: 800px;
       object-fit: cover;
     }
+
     .hero-text {
       margin-top: 30px;
       padding: 20px;
       text-align: center;
     }
+
     .hero-text h1 {
       font-size: 2.5em;
       margin-bottom: 40px;
     }
+
     .hero-text .content {
       max-width: 1000px;
       margin: 0 auto;
@@ -93,6 +109,7 @@ nt-weight: bold;
       line-height: 1.8;
       font-size: 1.1em;
     }
+
     .block {
       display: flex;
       align-items: center;
@@ -101,131 +118,136 @@ nt-weight: bold;
       border-bottom: 1px solid #eee;
       background-color: #fff3dd;
     }
+
     .block.reverse {
       flex-direction: row-reverse;
     }
+
     .block img {
       width: 45%;
       border-radius: 8px;
     }
+
     .block div {
       width: 55%;
     }
+
     .footer {
       background: #ffe7b6;
       text-align: center;
       padding: 20px;
     }
+
     .social-links a {
       color: #444;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
+
     body {
       background-color: #fffaf1;
-    }
-    .main-nav li a:hover {
-      color: #da8f3f;
     }
   </style>
 </head>
 <body>
-<div class="header-container">
-  <div class="logo">
-    <img src="images/logo-central.png" alt="Compawss Logo" />
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <img src="images/logo-central.png" alt="Compawss Logo" />
+    </div>
+    <div class="nav-and-lang">
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="app.html">Coming Soon</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <label for="language-select">🌍</label>
+        <select id="language-select">
+          <option value="en" selected>EN</option>
+          <option value="pt">PT</option>
+          <option value="nl">NL</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
   </div>
-  <nav class="main-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="history.html">History</a></li>
-      <li><a href="signup.html">Sign Up</a></li>
-      <li><a href="partners.html">Partners</a></li>
-      <li><a href="app.html">Coming Soon</a></li>
-    </ul>
-  </nav>
-  <div class="language-switcher">
-    <label for="language-select">🌍</label>
-    <select id="language-select">
-      <option value="en" selected>EN</option>
-      <option value="pt">PT</option>
-      <option value="nl">NL</option>
-      <option value="fr">FR</option>
-      <option value="es">ES</option>
-      <option value="de">DE</option>
-    </select>
-  </div>
-</div>
 </header>
 
+<section class="hero">
+  <img src="images/hero-image.jpg" alt="Animals of all kinds" />
+</section>
 
-  <section class="hero">
-    <img src="images/hero-image.jpg" alt="Animals of all kinds" />
-  </section>
+<section class="hero-text">
+  <h1 style="text-align: center; font-size: 5em;">Welcome to Compawss</h1>
+</section>
 
-  <section class="hero-text">
-    <h1 style="text-align: center; font-size: 5em;">Welcome to Compawss</h1>
-  </section>
+<section class="block">
+  <img src="images/adopters.jpg" alt="Adoption" />
+  <div>
+    <p>🧡 <strong>For Adopters: Find the Right Soul, Not Just a Pet</strong></p>
+    <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
+    <p>🐾 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit. No more scrolling endlessly or missing out on that one special companion.</p>
+    <p>Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.</p>
+  </div>
+</section>
 
-  <section class="block">
-    <img src="images/adopters.jpg" alt="Adoption" />
-    <div>
-      <p>🧡 <strong>For Adopters: Find the Right Soul, Not Just a Pet</strong></p>
-      <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
-      <p>🐾 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit. No more scrolling endlessly or missing out on that one special companion.</p>
-      <p>Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.</p>
-    </div>
-  </section>
+<section class="block reverse">
+  <img src="images/volunteers.jpg" alt="Volunteering" />
+  <div>
+    <p>🤝 <strong>For Volunteers: Help Where It’s Needed Most</strong></p>
+    <p>Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
+    <p>Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter — from walking dogs, caring for exotic animals, helping at events, or supporting online operations.</p>
+    <p>You choose when and how you give your time — and we make sure it counts.</p>
+  </div>
+</section>
 
-  <section class="block reverse">
-    <img src="images/volunteers.jpg" alt="Volunteering" />
-    <div>
-      <p>🤝 <strong>For Volunteers: Help Where It’s Needed Most</strong></p>
-      <p>Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
-      <p>Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter — from walking dogs, caring for exotic animals, helping at events, or supporting online operations.</p>
-      <p>You choose when and how you give your time — and we make sure it counts.</p>
-    </div>
-  </section>
+<section class="block">
+  <img src="images/shelters-events.jpg" alt="Events" />
+  <div>
+    <p>📅 <strong>For Shelters: Share Events, Reach More People</strong></p>
+    <p>Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and social platforms, reaching people who care.</p>
+    <p>Your local event deserves visibility — and your animals deserve a chance.</p>
+  </div>
+</section>
 
-  <section class="block">
-    <img src="images/shelters-events.jpg" alt="Events" />
-    <div>
-      <p>📅 <strong>For Shelters: Share Events, Reach More People</strong></p>
-      <p>Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and social platforms, reaching people who care.</p>
-      <p>Your local event deserves visibility — and your animals deserve a chance.</p>
-    </div>
-  </section>
+<section class="block reverse">
+  <img src="images/mission.jpg" alt="Mission" />
+  <div>
+    <p>🐾 <strong>For Everyone: A Mission of Animal Welfare</strong></p>
+    <p>Compawss believes every animal deserves a voice — and a future. We support shelters, adopters, rescuers, volunteers, and communities with tools to:</p>
+    <ul>
+      <li>Reduce overcrowding</li>
+      <li>Reunite lost animals faster</li>
+      <li>Give visibility to “less adoptable” pets</li>
+      <li>Connect people and animals in meaningful ways</li>
+      <li>Strengthen the circle of compassion globally</li>
+    </ul>
+  </div>
+</section>
 
-  <section class="block reverse">
-    <img src="images/mission.jpg" alt="Mission" />
-    <div>
-      <p>🐾 <strong>For Everyone: A Mission of Animal Welfare</strong></p>
-      <p>Compawss believes every animal deserves a voice — and a future. We support shelters, adopters, rescuers, volunteers, and communities with tools to:</p>
-      <ul>
-        <li>Reduce overcrowding</li>
-        <li>Reunite lost animals faster</li>
-        <li>Give visibility to “less adoptable” pets</li>
-        <li>Connect people and animals in meaningful ways</li>
-        <li>Strengthen the circle of compassion globally</li>
-      </ul>
-    </div>
-  </section>
+<footer class="footer">
+  <p>© 2025 Compawss. Made with ❤️ by Ava & Ursula.</p>
+  <div class="social-links">
+    <a href="https://instagram.com/compawss.br" target="_blank">Instagram</a> |
+    <a href="https://facebook.com/compawssbr" target="_blank">Facebook</a>
+  </div>
+</footer>
 
-  <footer class="footer">
-    <p>© 2025 Compawss. Made with ❤️ by Ava & Ursula.</p>
-    <div class="social-links">
-      <a href="https://instagram.com/compawss.br" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/compawssbr" target="_blank">Facebook</a>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById("language-select").addEventListener("change", function () {
-      const lang = this.value;
-      window.location.href = `/${lang}/index.html`;
-    });
-  </script>
+<script>
+  document.getElementById("language-select").addEventListener("change", function () {
+    const lang = this.value;
+    window.location.href = `/${lang}/index.html`;
+  });
+</script>
 </body>
 </html>
 
