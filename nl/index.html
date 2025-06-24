@@ -3,57 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compawss - Elke Poot telt</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Compawss - Elke Poot Telt</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
+    body {
+      background-color: #fffaf1;
+      font-family: sans-serif;
+    }
+
     .header {
       background-color: #fdf6ef;
-      padding: 10px 20px;
       border-bottom: 2px solid #e0cfa6;
-      position: relative;
-      z-index: 10;
+      padding: 10px 20px;
     }
+
     .header-container {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       flex-wrap: wrap;
     }
+
     .logo {
       flex: 1;
       text-align: left;
     }
+
     .logo img {
-      height: 120px;
+      height: 200px;
       width: auto;
+      display: block;
     }
+
     .main-nav {
       flex: 2;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
     }
+
     .main-nav ul {
       list-style: none;
       display: flex;
+      gap: 30px;
       justify-content: center;
-      gap: 25px;
-      padding-left: 0;
+      flex-wrap: wrap;
     }
+
     .main-nav li a {
       text-decoration: none;
       color: #333;
       font-weight: bold;
-      font-size: 18px;
+      font-size: 22px;
     }
+
+    .main-nav li a:hover {
+      color: #da8f3f;
+    }
+
     .language-switcher {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
+      margin-left: auto;
+      margin-right: 10px;
+      align-self: flex-start;
     }
+
     .language-switcher select {
       padding: 0;
       font-size: 14px;
@@ -63,24 +82,35 @@
       color: #333;
       cursor: pointer;
     }
+
     .hero {
       text-align: center;
-      margin: 20px 0;
+      margin: 0;
     }
+
     .hero img {
       width: 100%;
       max-height: 800px;
       object-fit: cover;
     }
+
     .hero-text {
       margin-top: 30px;
       padding: 20px;
       text-align: center;
     }
+
     .hero-text h1 {
-      font-size: 3em;
+      font-size: 5em;
       margin-bottom: 40px;
     }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.8em;
+      }
+    }
+
     .hero-text .content {
       max-width: 1000px;
       margin: 0 auto;
@@ -88,6 +118,7 @@
       line-height: 1.8;
       font-size: 1.1em;
     }
+
     .block {
       display: flex;
       align-items: center;
@@ -95,53 +126,137 @@
       padding: 50px 80px;
       border-bottom: 1px solid #eee;
       background-color: #fff3dd;
+      flex-wrap: wrap;
     }
+
     .block.reverse {
       flex-direction: row-reverse;
     }
+
     .block img {
       width: 45%;
       border-radius: 8px;
+      max-width: 100%;
     }
+
     .block div {
       width: 55%;
+      min-width: 300px;
     }
+
     .footer {
       background: #ffe7b6;
       text-align: center;
       padding: 20px;
     }
+
     .social-links a {
       color: #444;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
     }
-    body {
-      background-color: #fffaf1;
-    }
-    .main-nav li a:hover {
-      color: #da8f3f;
-    }
-    @media screen and (max-width: 768px) {
-      .header-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .main-nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-      }
-      .language-switcher {
-        justify-content: center;
-        margin-top: 10px;
-      }
-    }
   </style>
 </head>
 <body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <img src="../images/logo-central.png" alt="Compawss Logo" />
+      </div>
+      <div class="language-switcher">
+        <label for="language-select">🌍</label>
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+          <option value="nl" selected>NL</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="../nl/index.html">Start</a></li>
+        <li><a href="../nl/about.html">Over Ons</a></li>
+        <li><a href="../nl/history.html">Verhaal</a></li>
+        <li><a href="../nl/signup.html">Aanmelden</a></li>
+        <li><a href="../nl/partners.html">Partners</a></li>
+        <li><a href="../nl/app.html">Binnenkort</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="../images/hero-image.jpg" alt="Diverse dieren" />
+  </section>
+
+  <section class="hero-text">
+    <h1>Welkom bij Compawss</h1>
+  </section>
+
+  <section class="block">
+    <img src="../images/adopters.jpg" alt="Adoptie" />
+    <div>
+      <p>🧡 <strong>Voor Adoptanten: Vind de Juiste Ziel, Niet Alleen een Huisdier</strong></p>
+      <p>Compawss is jouw partner in het adoptieproces. Wij verbinden je met alle beschikbare dieren in opvangcentra in jouw land — of binnen de Europese Unie.</p>
+      <p>🐾 Maar we doen meer dan alleen advertenties tonen. Met ons AI-systeem leren we over jouw levensstijl, energieniveau, thuissituatie en voorkeuren — en stellen met zorg dieren voor wiens persoonlijkheden bij jou passen.</p>
+      <p>Of je nu droomt van een oudere kat, een vrolijke hond, een slimme papegaai, een schattig konijn of zelfs een rustige reptiel — Compawss helpt je degene te vinden die op je wacht.</p>
+    </div>
+  </section>
+
+  <section class="block reverse">
+    <img src="../images/volunteers.jpg" alt="Vrijwilligerswerk" />
+    <div>
+      <p>🤝 <strong>Voor Vrijwilligers: Help Waar het Echt Nodig Is</strong></p>
+      <p>Vrijwilligerswerk hoeft niet verwarrend of beperkt te zijn. Bij Compawss zie je alle opvangcentra en organisaties die hulp nodig hebben — in jouw regio of zelfs daarbuiten.</p>
+      <p>Of je nu een uurtje per week hebt, een speciale vaardigheid bezit of gewoon een groot hart hebt — Compawss verbindt je met taken die er écht toe doen: honden uitlaten, voor exotische dieren zorgen, helpen bij evenementen of online bijdragen.</p>
+    </div>
+  </section>
+
+  <section class="block">
+    <img src="../images/shelters-events.jpg" alt="Evenementen" />
+    <div>
+      <p>📅 <strong>Voor Opvangcentra: Promoot Je Evenementen en Bereik Meer Mensen</strong></p>
+      <p>Veel opvangcentra hebben moeite om adoptiedagen, open dagen of campagnes bekend te maken. Compawss lost dit op met een AI-gestuurde evenementverspreider: vul gewoon je evenement in en wij helpen met het delen ervan op sociale media en in de gemeenschap.</p>
+      <p>Jouw evenement verdient zichtbaarheid — en jouw dieren verdienen een kans.</p>
+    </div>
+  </section>
+
+  <section class="block reverse">
+    <img src="../images/mission.jpg" alt="Missie" />
+    <div>
+      <p>🐾 <strong>Voor Iedereen: Een Missie voor Dierenwelzijn</strong></p>
+      <p>Compawss gelooft dat elk dier een stem verdient — en een toekomst. Wij ondersteunen opvangcentra, adoptanten, vrijwilligers, reddingswerkers en gemeenschappen met tools om:</p>
+      <ul>
+        <li>Overbevolking te verminderen</li>
+        <li>Vermiste dieren met hun baasjes te herenigen</li>
+        <li>"Minder adopteerbare" dieren zichtbaar te maken</li>
+        <li>Mensen en dieren doelgericht te verbinden</li>
+        <li>De cirkel van compassie in de wereld te versterken</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 Compawss. Met ❤️ gemaakt door Ava & Ursula.</p>
+    <div class="social-links">
+      <a href="https://instagram.com/compawss.br" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/compawssbr" target="_blank">Facebook</a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("language-select").addEventListener("change", function () {
+      const lang = this.value;
+      if (lang === "en") {
+        window.location.href = `/index.html`;
+      } else {
+        window.location.href = `/${lang}/index.html`;
+      }
+    });
+  </script>
 </body>
 </html>
 
