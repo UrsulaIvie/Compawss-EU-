@@ -4,268 +4,156 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compawss - Guiding Every Paw</title>
+  <meta name="description" content="Compawss connects shelters, volunteers, and adopters across Europe to help more animals find loving homes." />
+  <meta name="keywords" content="pet adoption, animal shelters, volunteer, EU, animal welfare, AI matching" />
+  <link rel="preload" href="images/hero-image.jpg" as="image" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      background-color: #fffaf1;
-      font-family: sans-serif;
-    }
-
-    .header {
-      background-color: #fdf6ef;
-      border-bottom: 2px solid #e0cfa6;
-      padding: 10px 20px;
-    }
-
-    .header-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .logo {
-      flex: 1;
-      text-align: left;
-    }
-
-    .logo img {
-      height: 200px;
-      width: auto;
-      display: block;
-    }
-
-    .main-nav {
-      flex: 2;
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
-    }
-
-    .main-nav ul {
-      list-style: none;
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .main-nav li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-      font-size: 22px;
-    }
-
-    .main-nav li a:hover {
-      color: #da8f3f;
-    }
-
-    .language-switcher {
-      margin-left: auto;
-      margin-right: 10px;
-      align-self: flex-start;
-    }
-
-    .language-switcher select {
-      padding: 0;
-      font-size: 14px;
-      border: none;
-      background: transparent;
-      font-weight: bold;
-      color: #333;
-      cursor: pointer;
-    }
-
-    .hero {
-      text-align: center;
-      margin: 0;
-    }
-
-    .hero img {
-      width: 100%;
-      max-height: 800px;
-      object-fit: cover;
-    }
-
-    .hero-text {
-      margin-top: 30px;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .hero-text h1 {
-      font-size: 5em;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 2.8em;
-      }
-    }
-
-    .hero-text .content {
-      max-width: 1000px;
-      margin: 0 auto;
-      text-align: justify;
-      line-height: 1.8;
-      font-size: 1.1em;
-    }
-
-    .block {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      padding: 50px 80px;
-      border-bottom: 1px solid #eee;
-      background-color: #fff3dd;
-      flex-wrap: wrap;
-    }
-
-    .block.reverse {
-      flex-direction: row-reverse;
-    }
-
-    .block img {
-      width: 45%;
-      border-radius: 8px;
-      max-width: 100%;
-    }
-
-    .block div {
-      width: 55%;
-      min-width: 300px;
-    }
-
-    .footer {
-      background: #ffe7b6;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .social-links a {
-      color: #444;
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background-color: #fffaf1; font-family: 'Segoe UI', sans-serif; transition: background 0.3s ease; }
+    .header { background-color: #fdf6ef; border-bottom: 2px solid #e0cfa6; padding: 10px 20px; position: relative; }
+    .header-container { display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; }
+    .logo { flex: 1; text-align: left; }
+    .logo img { height: 120px; width: auto; }
+    .main-nav { flex: 3; display: flex; justify-content: flex-start; margin-top: 10px; }
+    .main-nav ul { list-style: none; display: flex; gap: 30px; justify-content: flex-start; flex-wrap: wrap; }
+    .main-nav li a { text-decoration: none; color: #333; font-weight: bold; font-size: 20px; transition: color 0.3s ease; }
+    .main-nav li a:hover { color: #da8f3f; }
+    .language-switcher { position: absolute; top: 15px; right: 20px; font-weight: bold; }
+    .language-switcher select { font-size: 14px; border: none; background: transparent; cursor: pointer; }
+    .language-switcher::before { content: "\1F30E "; margin-right: 5px; }
+    .hero { text-align: center; }
+    .hero img { width: 100%; max-height: 800px; object-fit: cover; }
+    .hero-text { margin-top: 30px; padding: 20px; text-align: center; }
+    .hero-text h1 { font-size: 3em; margin-bottom: 10px; transition: color 0.3s ease; }
+    .tagline { font-size: 1.2em; color: #333; }
+    .why-join, .cta-button { background-color: #fff3dd; margin: 30px auto; padding: 30px; border-radius: 12px; max-width: 700px; text-align: center; }
+    .why-join ul { list-style: none; padding: 0; }
+    .why-join li { margin-bottom: 10px; font-size: 1.1em; color: #444; }
+    .cta-button .button { background-color: #da8f3f; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block; margin-top: 10px; transition: background 0.3s ease; }
+    .cta-button .button:hover { background-color: #c8782d; }
+    .block { display: flex; align-items: center; gap: 40px; padding: 50px 80px; border-bottom: 1px solid #eee; background-color: #fff3dd; flex-wrap: wrap; }
+    .block.reverse { flex-direction: row-reverse; }
+    .block img { width: 45%; border-radius: 8px; max-width: 100%; }
+    .block div { width: 55%; min-width: 300px; }
+    .more-text { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: #444; margin-top: 0; }
+    .more-text.expanded { max-height: 500px; margin-top: 10px; }
+    .read-more-btn { color: #da8f3f; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 10px; background: none; border: none; font-size: 1em; transition: color 0.3s ease; }
+    .read-more-btn:hover { color: #c8782d; }
+    .footer { background: #ffe7b6; text-align: center; padding: 20px; }
+    .social-links a img { height: 24px; width: auto; margin: 0 10px; transition: transform 0.3s ease; }
+    .social-links a img:hover { transform: scale(1.1); }
   </style>
 </head>
-
 <body>
- <header style="background-color: #fdf6ef; padding: 10px 20px; border-bottom: 2px solid #e0cfa6;">
-  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;">
-    <div class="logo" style="flex: 1;">
-      <a href="index.html">
-        <img src="logo-central.png" alt="Compawss Logo" style="height: 80px;">
-      </a>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">
+        <a href="index.html"><img src="logo-central.png" alt="Compawss Logo"></a>
+      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="history.html">History</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="app.html">App</a></li>
+        </ul>
+      </nav>
+      <div class="language-switcher">
+        <select id="language-select">
+          <option value="en">EN</option>
+          <option value="pt">PT</option>
+          <option value="nl">NL</option>
+          <option value="fr">FR</option>
+          <option value="es">ES</option>
+          <option value="de">DE</option>
+        </select>
+      </div>
     </div>
-    <nav style="flex: 2; text-align: right;">
-      <ul style="list-style: none; padding: 0; margin: 0; display: flex; gap: 20px; justify-content: flex-end; align-items: center; font-size: 1em;">
-        <li><a href="index.html" style="text-decoration: none; color: #333;">Home</a></li>
-        <li><a href="about.html" style="text-decoration: none; color: #333;">About</a></li>
-        <li><a href="history.html" style="text-decoration: none; color: #333;">History</a></li>
-        <li><a href="signup.html" style="text-decoration: none; color: #333;">Sign Up</a></li>
-        <li><a href="partners.html" style="text-decoration: none; color: #333;">Partners</a></li>
-        <li><a href="app.html" style="text-decoration: none; color: #333;">App</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-
+  </header>
   <section class="hero">
     <img src="images/hero-image.jpg" alt="Animals of all kinds" />
-
   </section>
 
   <section class="hero-text">
-   <h1>Welcome to Compawss</h1>
-<p style="font-size: 1.2em; margin-top: 0.2em; color: #333;">
-  We connect shelters, volunteers, and adopters across Europe — for every paw, everywhere.
- </p> 
- 
-<section style="background-color: #fff3dd; padding: 30px 20px; margin-top: 30px; border-radius: 12px;">
-  <h2 style="text-align: center; font-size: 1.8em; color: #333;">Why Join Compawss?</h2>
-  <div style="max-width: 700px; margin: 20px auto; font-size: 1.1em; line-height: 1.8em; color: #444;">
-    <p><strong>• More visibility</strong> for your animals</p>
-    <p><strong>• Volunteers</strong> ready to help you</p>
-    <p><strong>• Promote</strong> your adoption events</p>
-    <p><strong>• Multilingual</strong> and free forever</p>
-  </div>
-</section>
+    <h1>Welcome to Compawss</h1>
+    <p class="tagline">We connect shelters, volunteers, and adopters across Europe.</p>
+  </section>
 
+  <section class="why-join">
+    <h2>Why Join Compawss?</h2>
+    <ul>
+      <li>More visibility for your animals</li>
+      <li>Volunteers ready to help</li>
+      <li>Events promoted with AI support</li>
+      <li>Completely free and multilingual</li>
+    </ul>
+  </section>
 
-  <!-- BLOCO 1 -->
+  <section class="cta-button">
+    <a href="signup.html" class="button">Are you a shelter? Sign up here for free</a>
+  </section>
+
   <section class="block">
-    <img src="images/adopters.jpg" alt="Adoption" />
+    <img src="images/adopters.jpg" alt="Person adopting a dog">
     <div>
-      <p>🧡 <strong>For Adopters: Find the Right Soul, Not Just a Pet</strong></p>
-      <p>Compawss is your companion on the journey to adoption. We connect you to all adoptable animals listed across shelters in your country — or, in the case of the European Union, from shelters in every participating country.</p>
-      <p>🐾 But we go beyond listings. With our AI Matching System, we learn about your lifestyle, energy level, home environment, and wishes — then gently suggest pets whose personalities and needs are a perfect fit.</p>
-      <p>Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who’s been waiting just for you.</p>
+      <p><strong>Find your ideal companion</strong><br>Our AI helps match you with pets that fit your lifestyle.</p>
+      <p class="more-text">Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who's been waiting just for you.</p>
+      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
     </div>
   </section>
 
-  <!-- BLOCO 2 -->
   <section class="block reverse">
-    <img src="images/volunteers.jpg" alt="Volunteering" />
+    <img src="images/volunteers.jpg" alt="Person volunteering at shelter">
     <div>
-      <p>🤝 <strong>For Volunteers: Help Where It’s Needed Most</strong></p>
-      <p>Volunteering shouldn’t feel confusing or limited. With Compawss, you can see all the shelters and organizations currently seeking help, both in your country and across borders.</p>
-      <p>Whether you have an hour a week, a special skill, or just a big heart, Compawss matches you with volunteer tasks that truly matter — from walking dogs, caring for exotic animals, helping at events, or supporting online operations.</p>
+      <p><strong>Make a difference where it matters</strong><br>Find volunteer opportunities tailored to your skills.</p>
+      <p class="more-text">Whether you have an hour a week or a special skill, Compawss helps match you with shelters that need your help — from walking dogs to helping online.</p>
+      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
     </div>
   </section>
 
-  <!-- BLOCO 3 -->
   <section class="block">
-    <img src="images/shelters-events.jpg" alt="Events" />
+    <img src="images/shelters-events.jpg" alt="Shelter event promotion">
     <div>
-      <p>📅 <strong>For Shelters: Share Events, Reach More People</strong></p>
-      <p>Shelters and rescues often struggle to promote adoption fairs, open-door days, or fundraising events. Compawss solves that with a built-in AI event booster: just enter your event and we’ll help share it across communities and platforms.</p>
-      <p>Your local event deserves visibility — and your animals deserve a chance.</p>
+      <p><strong>Promote your events</strong><br>Share adoption days and fundraising events with ease.</p>
+      <p class="more-text">Our AI booster helps you reach more people, more effectively, so your animals can find homes faster.</p>
+      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
     </div>
   </section>
 
-  <!-- BLOCO 4 -->
   <section class="block reverse">
-    <img src="images/mission.jpg" alt="Mission" />
+    <img src="images/mission.jpg" alt="Animal welfare mission">
     <div>
-      <p>🐾 <strong>For Everyone: A Mission of Animal Welfare</strong></p>
-      <p>Compawss believes every animal deserves a voice — and a future. We support shelters, adopters, rescuers, volunteers, and communities with tools to:</p>
-      <ul>
-        <li>Reduce overcrowding</li>
-        <li>Reunite lost animals faster</li>
-        <li>Give visibility to “less adoptable” pets</li>
-        <li>Connect people and animals in meaningful ways</li>
-        <li>Strengthen the circle of compassion globally</li>
-      </ul>
+      <p><strong>Driven by compassion</strong><br>Our mission is to support animal welfare in every form.</p>
+      <p class="more-text">We connect people and pets, reduce overcrowding, and make every voice heard — especially those that don’t speak our language.</p>
+      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
     </div>
   </section>
 
   <footer class="footer">
-    <p>© 2025 Compawss. Made with ❤️ by Ava & Ursula.</p>
+    <p>&copy; 2025 Compawss. Made with love by Ava & Ursula.</p>
     <div class="social-links">
-      <a href="https://instagram.com/compawss.br" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/compawssbr" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/compawss.br" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
+      <a href="https://www.facebook.com/compawssbr" target="_blank"><img src="images/facebook.svg" alt="Facebook logo"></a>
     </div>
   </footer>
-
   <script>
     document.getElementById("language-select").addEventListener("change", function () {
       const lang = this.value;
       window.location.href = `/${lang}/index.html`;
     });
+
+    function toggleText(button) {
+      const moreText = button.previousElementSibling;
+      moreText.classList.toggle("expanded");
+      button.textContent = moreText.classList.contains("expanded") ? "Read less" : "Read more";
+    }
   </script>
 </body>
 </html>
+
 
 
 
