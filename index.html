@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Compawss - Guiding Every Paw</title>
@@ -14,7 +15,7 @@
     .header { background-color: #fdf6ef; border-bottom: 2px solid #e0cfa6; padding: 10px 20px; position: relative; }
     .header-container { display: flex; justify-content: flex-start; align-items: center; flex-wrap: wrap; }
     .logo { flex: 1; text-align: left; }
-    .logo img { height: 120px; width: auto; }
+    .logo img { height: 200px; width: auto; }
     .main-nav { flex: 3; display: flex; justify-content: flex-start; margin-top: 10px; }
     .main-nav ul { list-style: none; display: flex; gap: 30px; justify-content: flex-start; flex-wrap: wrap; }
     .main-nav li a { text-decoration: none; color: #333; font-weight: bold; font-size: 20px; transition: color 0.3s ease; }
@@ -43,6 +44,62 @@
     .footer { background: #ffe7b6; text-align: center; padding: 20px; }
     .social-links a img { height: 24px; width: auto; margin: 0 10px; transition: transform 0.3s ease; }
     .social-links a img:hover { transform: scale(1.1); }
+  @media (max-width: 768px) {
+  .logo img {
+    height: 120px !important;
+  }
+}
+@media (min-width: 900px) {
+  .block {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 120px !important;
+  }
+  .block {
+    flex-direction: column !important;
+    text-align: center;
+  }
+  .block img,
+  .block div {
+    width: 100% !important;
+  }
+}
+</style>
+  <meta property="og:title" content="Compawss - Guiding Every Paw" />
+  <meta property="og:description" content="Connecting shelters, volunteers and adopters across Europe." />
+  <meta property="og:image" content="https://compawss.org/images/hero-image.jpg" />
+  <meta property="og:url" content="https://compawss.org/" />
+  <style>
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #da8f3f;
+      color: white;
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .back-to-top:hover {
+      background-color: #c8782d;
+    }
+    .cta-button .button {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(218,143,63, 0.6); }
+      70% { box-shadow: 0 0 0 10px rgba(218,143,63, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(218,143,63, 0); }
+    }
   </style>
 </head>
 <body>
@@ -135,9 +192,9 @@
   <footer class="footer">
     <p>&copy; 2025 Compawss. Made with love by Ava & Ursula.</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/compawss.br" target="_blank"><img src="images/instagram.svg" alt="Instagram logo"></a>
-      <a href="https://www.facebook.com/compawssbr" target="_blank"><img src="images/facebook.svg" alt="Facebook logo"></a>
-    </div>
+  <a href="https://www.instagram.com/compawssbr" target="_blank"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.facebook.com/profile.php?id=61577262100328" target="_blank"><i class="fab fa-facebook"></i></a>
+</div>
   </footer>
   <script>
     document.getElementById("language-select").addEventListener("change", function () {
@@ -151,8 +208,20 @@
       button.textContent = moreText.classList.contains("expanded") ? "Read less" : "Read more";
     }
   </script>
+  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Top</button>
+  <script>
+    const topBtn = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = 'block';
+      } else {
+        topBtn.style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
+
 
 
 
