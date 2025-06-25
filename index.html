@@ -90,16 +90,18 @@
     .footer { background: #ffe7b6; text-align: center; padding: 20px; }
     .social-links a img { height: 24px; width: auto; margin: 0 10px; transition: transform 0.3s ease; }
     .social-links a img:hover { transform: scale(1.1); }
-  @media (max-width: 768px) {
+   @media (max-width: 768px) {
   .header {
-    position: static;
+    position: relative;
+    z-index: 1000;
     background-color: #fdf6ef;
-    z-index: 10;
+    width: 100%;
   }
 
   .header-container {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 10px 15px;
   }
 
@@ -139,7 +141,7 @@
   .block div {
     width: 100% !important;
   }
-  }
+}
   
 </style>
   <meta property="og:title" content="Compawss - Guiding Every Paw" />
