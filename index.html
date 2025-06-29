@@ -1,325 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compawss - Guiding Every Paw</title>
-  <meta name="description" content="Compawss connects shelters, volunteers, and adopters across Europe to help more animals find loving homes." />
-  <meta name="keywords" content="pet adoption, animal shelters, volunteer, EU, animal welfare, AI matching" />
-  <link rel="preload" href="images/hero-image.jpg" as="image" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Compawss with Buster</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background-color: #fffaf1; font-family: 'Segoe UI', sans-serif; transition: background 0.3s ease; }
-   .header {
-  background-color: #fdf6ef;
-  border-bottom: 2px solid #e0cfa6;
-  padding: 0;
-  margin: 0;
-  position: relative;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  height: 120px;
-}
-
-.logo img {
-  height: 180px;
-  width: auto;
-}
-
-.main-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-}
-
-.main-nav li a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  font-size: 30px;
-  transition: color 0.3s ease;
-}
-
-.main-nav li a:hover {
-  color: #da8f3f;
-}
-
-.language-switcher {
-  font-weight: bold;
-}
-
-.language-switcher select {
-  font-size: 18px;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
-
-.language-switcher::before {
-  content: "\1F30E ";
-  margin-right: 5px;
-}
-
-    .hero { text-align: center; }
-    .hero img { width: 100%; max-height: 800px; object-fit: cover; }
-    .hero-text { margin-top: 30px; padding: 20px; text-align: center; }
-    .hero-text h1 { font-size: 3em; margin-bottom: 10px; transition: color 0.3s ease; }
-    .tagline { font-size: 1.2em; color: #333; }
-    .why-join, .cta-button { background-color: #fff3dd; margin: 30px auto; padding: 30px; border-radius: 12px; max-width: 700px; text-align: center; }
-    .why-join ul { list-style: none; padding: 0; }
-    .why-join li { margin-bottom: 10px; font-size: 1.1em; color: #444; }
-    .cta-button .button { background-color: #da8f3f; color: white; padding: 10px 20px; text-decoration: none; font-weight: bold; border-radius: 8px; display: inline-block; margin-top: 10px; transition: background 0.3s ease; }
-    .cta-button .button:hover { background-color: #c8782d; }
-    .block { display: flex; align-items: center; gap: 40px; padding: 50px 80px; border-bottom: 1px solid #eee; background-color: #fff3dd; flex-wrap: wrap; }
-    .block.reverse { flex-direction: row-reverse; }
-    .block img { width: 45%; border-radius: 8px; max-width: 100%; }
-    .block div { width: 55%; min-width: 300px; }
-    .more-text { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: #444; margin-top: 0; }
-    .more-text.expanded { max-height: 500px; margin-top: 10px; }
-    .read-more-btn { color: #da8f3f; font-weight: bold; cursor: pointer; display: inline-block; margin-top: 10px; background: none; border: none; font-size: 1em; transition: color 0.3s ease; }
-    .read-more-btn:hover { color: #c8782d; }
-    .footer { background: #ffe7b6; text-align: center; padding: 20px; }
-    .social-links a img { height: 24px; width: auto; margin: 0 10px; transition: transform 0.3s ease; }
-    .social-links a img:hover { transform: scale(1.1); }
- @media (max-width: 768px) {
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    background-color: #fdf6efcc; /* semitransparente */
-    padding: 10px 15px;
-  }
-
-  .header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
-
-  .logo {
-    flex: 1;
-  }
-
-  .logo img {
-    height: 80px !important;
-  }
-
-  .main-nav {
-    flex: 2;
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
-  }
-
-  .main-nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .main-nav li a {
-    font-size: 16px;
-  }
-
-  .language-switcher {
-    flex: 1;
-    text-align: right;
-  }
-
-  .language-switcher select {
-    font-size: 14px;
-  }
-
-  .block {
-    flex-direction: column !important;
-    text-align: center;
-  }
-
-  .block img,
-  .block div {
-    width: 100% !important;
-  }
-
-  .hero {
-    margin-top: 120px; /* espaço para a header fixa */
-  }
-}
-  
-</style>
-  <meta property="og:title" content="Compawss - Guiding Every Paw" />
-  <meta property="og:description" content="Connecting shelters, volunteers and adopters across Europe." />
-  <meta property="og:image" content="https://compawss.org/images/hero-image.jpg" />
-  <meta property="og:url" content="https://compawss.org/" />
-  <style>
-    .back-to-top {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #da8f3f;
-      color: white;
-      padding: 10px 14px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-      display: none;
-      z-index: 999;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    .buster-mascote-container {
+      position: relative;
+      width: 100%;
+      height: 120px;
+      overflow: hidden;
+      margin-top: 2rem;
     }
-    .back-to-top:hover {
-      background-color: #c8782d;
+
+    .buster-mascote {
+      position: absolute;
+      bottom: 0;
+      height: 100px;
+      animation: buster-roll 20s linear infinite;
+      transform-origin: center;
+      transition: transform 0.3s ease-in-out;
     }
-    .cta-button .button {
-      animation: pulse 2s infinite;
+
+    @keyframes buster-roll {
+      0% {
+        left: -150px;
+        transform: scaleX(1) rotate(0deg);
+      }
+      50% {
+        left: 100%;
+        transform: scaleX(1) rotate(360deg);
+      }
+      51% {
+        transform: scaleX(-1) rotate(0deg);
+      }
+      100% {
+        left: -150px;
+        transform: scaleX(-1) rotate(-360deg);
+      }
     }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(218,143,63, 0.6); }
-      70% { box-shadow: 0 0 0 10px rgba(218,143,63, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(218,143,63, 0); }
+
+    @media (max-width: 500px) {
+      .buster-mascote-container {
+        height: 80px;
+      }
+
+      .buster-mascote {
+        height: 70px;
+      }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="header-container">
-      <div class="logo">
-        <a href="index.html"><img src="logo-central.png" alt="Compawss Logo"></a>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="history.html">History</a></li>
-          <li><a href="signup.html">Sign Up</a></li>
-          <li><a href="partners.html">Partners</a></li>
-          <li><a href="app.html">App</a></li>
-        </ul>
-      </nav>
-      <div class="language-switcher">
-        <select id="language-select">
-          <option value="en">EN</option>
-          <option value="pt">PT</option>
-          <option value="nl">NL</option>
-          <option value="fr">FR</option>
-          <option value="es">ES</option>
-          <option value="de">DE</option>
-        </select>
-      </div>
-    </div>
-  </header>
-  <section class="hero">
-    <img src="images/hero-image.jpg" alt="Animals of all kinds" />
-  </section>
 
-  <section class="hero-text">
-    <h1>Welcome to Compawss</h1>
-    <p class="tagline">We connect shelters, volunteers, and adopters across Europe.</p>
-  </section>
+  <!-- BUSTER MASCOTE -->
+  <div class="buster-mascote-container">
+    <img src="assets/img/buster-mascote-transparent.png" alt="Buster mascote Compawss" class="buster-mascote">
+  </div>
 
-  <section class="why-join">
-    <h2>Why Join Compawss?</h2>
-    <ul>
-      <li>More visibility for your animals</li>
-      <li>Volunteers ready to help</li>
-      <li>Events promoted with AI support</li>
-      <li>Completely free and multilingual</li>
-    </ul>
-  </section>
-
-  <section class="cta-button">
-    <a href="signup.html" class="button">Are you a shelter? Sign up here for free</a>
-  </section>
-
-  <section class="block">
-    <img src="images/adopters.jpg" alt="Person adopting a dog">
-    <div>
-      <p><strong>Find your ideal companion</strong><br>Our AI helps match you with pets that fit your lifestyle.</p>
-      <p class="more-text">Whether you're dreaming of a senior cat, a joyful dog, a clever parrot, a cuddly rabbit, or even a gentle reptile — Compawss helps you find the one who's been waiting just for you.</p>
-      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
-    </div>
-  </section>
-
-  <section class="block reverse">
-    <img src="images/volunteers.jpg" alt="Person volunteering at shelter">
-    <div>
-      <p><strong>Make a difference where it matters</strong><br>Find volunteer opportunities tailored to your skills.</p>
-      <p class="more-text">Whether you have an hour a week or a special skill, Compawss helps match you with shelters that need your help — from walking dogs to helping online.</p>
-      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
-    </div>
-  </section>
-
-  <section class="block">
-    <img src="images/shelters-events.jpg" alt="Shelter event promotion">
-    <div>
-      <p><strong>Promote your events</strong><br>Share adoption days and fundraising events with ease.</p>
-      <p class="more-text">Our AI booster helps you reach more people, more effectively, so your animals can find homes faster.</p>
-      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
-    </div>
-  </section>
-
-  <section class="block reverse">
-    <img src="images/mission.jpg" alt="Animal welfare mission">
-    <div>
-      <p><strong>Driven by compassion</strong><br>Our mission is to support animal welfare in every form.</p>
-      <p class="more-text">We connect people and pets, reduce overcrowding, and make every voice heard — especially those that don’t speak our language.</p>
-      <button class="read-more-btn" onclick="toggleText(this)">Read more</button>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <p>&copy; 2025 Compawss. Made with love by Ava & Ursula.</p>
-    <div class="social-links">
-  <a href="https://www.instagram.com/compawssbr" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.facebook.com/profile.php?id=61577262100328" target="_blank"><i class="fab fa-facebook"></i></a>
-</div>
-  </footer>
-  <script>
-    document.getElementById("language-select").addEventListener("change", function () {
-      const lang = this.value;
-      window.location.href = `/${lang}/index.html`;
-    });
-
-    function toggleText(button) {
-      const moreText = button.previousElementSibling;
-      moreText.classList.toggle("expanded");
-      button.textContent = moreText.classList.contains("expanded") ? "Read less" : "Read more";
-    }
-  </script>
-  <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Top</button>
-  <script>
-    const topBtn = document.querySelector('.back-to-top');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 300) {
-        topBtn.style.display = 'block';
-      } else {
-        topBtn.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
-
-
-
-
-
-
- 
-   
- 
